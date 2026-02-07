@@ -1,0 +1,190 @@
+@import './reset.css';
+@import './components/navbar.css';
+@import './components/footer.css';
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/hero.css';
+@import './components/forms.css';
+@import './components/scroll-progress.css';
+@import './components/mouse-follower.css';
+@import './components/carousel.css';
+@import './components/marquee.css';
+@import './components/bento.css';
+@import './components/tabs.css';
+@import './components/timeline.css';
+@import './components/gradient-bg.css';
+@import './utilities/animations.css';
+@import './utilities/glassmorphism.css';
+@import './utilities/responsive.css';
+
+/* ========================================
+   DESIGN TOKENS
+   ======================================== */
+:root {
+  /* Core backgrounds — Negro puro */
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #141414;
+
+  /* Azul eléctrico — Solo para detalles/acentos */
+  --accent-primary: #00d4ff;
+  --accent-secondary: #0099cc;
+  --accent-glow: rgba(0, 212, 255, 0.12);
+  --accent-subtle: rgba(0, 212, 255, 0.06);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+  --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #7dd3fc 100%);
+  --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+
+  /* Text — Blanco y grises */
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --text-tertiary: #707070;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 20px;
+
+  /* Semantic */
+  --success: #00e676;
+  --warning: #ffab00;
+  --error: #ff5252;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-2xl: 8rem;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* Shadows */
+  --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.1);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Type scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.5rem;
+  --text-6xl: 4.5rem;
+}
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: var(--text-base);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section {
+  padding: var(--space-2xl) 0;
+}
+
+.section-title {
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: var(--space-xl);
+  line-height: 1.7;
+}
+
+/* Section header — centered by default */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.section-header .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Accent line under section titles */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--accent-primary);
+  margin-top: var(--space-sm);
+  border-radius: 2px;
+}
+
+.section-header .section-title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section divider line */
+.section-divider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+}
+
+/* Page content offset for fixed navbar */
+main {
+  padding-top: 80px;
+}
+
+/* Selection color */
+::selection {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}

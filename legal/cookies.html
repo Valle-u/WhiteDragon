@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    {{> head}}
+    <title>Aviso de Cookies — White Dragon</title>
+  </head>
+  <body>
+    {{> navbar}}
+
+    <main>
+      <section class="hero hero--sub">
+        <div class="hero__content">
+          <h1 class="hero__title"><span class="hero__title-accent">Aviso de Cookies</span></h1>
+          <p class="hero__subtitle">Última actualización: Febrero 2026</p>
+        </div>
+      </section>
+
+      <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="legal-content" style="max-width: 800px; margin: 0 auto;">
+
+            <div class="legal-block glass-card" data-aos="fade-up">
+              <h2>1. ¿Qué son las cookies?</h2>
+              <p>Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita un sitio web. Se utilizan para mejorar la experiencia del usuario y para recopilar información sobre cómo se utiliza el sitio.</p>
+            </div>
+
+            <div class="legal-block glass-card" data-aos="fade-up">
+              <h2>2. Cookies Esenciales</h2>
+              <p>Estas cookies son necesarias para el funcionamiento básico del sitio web. Incluyen cookies que le permiten navegar por el sitio y utilizar sus funciones. Estas cookies no recopilan información que pueda identificarle.</p>
+              <div style="margin-top: var(--space-md); padding: var(--space-md); background: var(--accent-subtle); border-radius: var(--radius-md);">
+                <p style="font-size: var(--text-sm);"><strong>wd-cookies-accepted:</strong> Almacena su preferencia de consentimiento de cookies.</p>
+              </div>
+            </div>
+
+            <div class="legal-block glass-card" data-aos="fade-up">
+              <h2>3. Cookies de Analítica (opcionales)</h2>
+              <p>Si usted da su consentimiento, podemos utilizar cookies de analítica para comprender cómo los visitantes interactúan con nuestro sitio web. Estas cookies nos ayudan a mejorar nuestros servicios.</p>
+            </div>
+
+            <div class="legal-block glass-card" data-aos="fade-up">
+              <h2>4. Control de Preferencias</h2>
+              <p>Puede gestionar sus preferencias de cookies en cualquier momento. Al visitar nuestro sitio por primera vez, se le presentará un banner donde podrá aceptar todas las cookies o solo las esenciales.</p>
+              <p>También puede eliminar las cookies almacenadas a través de la configuración de su navegador.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{> footer}}
+
+    <style>
+      .legal-block { margin-bottom: var(--space-lg); }
+      .legal-block h2 { font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-md); color: var(--text-primary); }
+      .legal-block p { color: var(--text-secondary); line-height: 1.8; }
+      .legal-block p + p { margin-top: var(--space-md); }
+    </style>
+
+    <script type="module">
+      import '/src/js/main.js'
+    </script>
+  </body>
+</html>

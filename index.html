@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    {{> head}}
+    <title>White Dragon — Plataforma B2B para Operadores</title>
+  </head>
+  <body>
+    {{> navbar}}
+
+    <main>
+      <!-- 1. HERO -->
+      <section class="hero hero--home" id="hero">
+        <div class="hero__bg">
+          <img src="/src/assets/img/hero.jpg" alt="" class="hero__bg-img" />
+          <div class="hero__overlay"></div>
+        </div>
+        <canvas class="hero__canvas" id="heroParticles"></canvas>
+
+        <div class="hero__container">
+          <!-- Left: Text content -->
+          <div class="hero__text">
+            <div class="hero__badges-row">
+              <div class="hero__badge"><span>Software B2B</span></div>
+              <div class="hero__badge hero__badge--alt"><span>Operadores con Licencia</span></div>
+            </div>
+
+            <h1 class="hero__title" data-text-reveal>
+              Potenciamos la Operación de <span class="hero__title-accent">Operadores de Juego</span> con Tecnología B2B
+            </h1>
+
+            <p class="hero__subtitle">
+              Plataforma integral de administración y conectividad con Agregadores de Juegos. Gestione operaciones de back-office, monitoree métricas en tiempo real y escale su negocio con herramientas diseñadas para el operador.
+            </p>
+
+            <div class="hero__actions">
+              <a href="/contacto.html" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Solicitar una Demo
+              </a>
+              <a href="/plataforma.html" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                Ver Plataforma
+              </a>
+            </div>
+
+            <!-- Mini stats -->
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <span class="hero__stat-number">99%</span>
+                <span class="hero__stat-label">Uptime</span>
+              </div>
+              <div class="hero__stat-divider"></div>
+              <div class="hero__stat">
+                <span class="hero__stat-number">50+</span>
+                <span class="hero__stat-label">Operadores</span>
+              </div>
+              <div class="hero__stat-divider"></div>
+              <div class="hero__stat">
+                <span class="hero__stat-number">10+</span>
+                <span class="hero__stat-label">Jurisdicciones</span>
+              </div>
+              <div class="hero__stat-divider"></div>
+              <div class="hero__stat">
+                <span class="hero__stat-number">24/7</span>
+                <span class="hero__stat-label">Monitoreo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Dashboard mockup -->
+          <div class="hero__visual">
+            <div class="hero__mockup-wrapper">
+              <div class="hero__mockup-glow"></div>
+              <div class="dashboard-mockup-placeholder animate-float">
+                <div class="mock-topbar">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span style="margin-left: auto; font-size: 10px; color: var(--text-tertiary);">White Dragon Panel</span>
+                </div>
+                <div class="mock-body">
+                  <div class="mock-sidebar">
+                    <div class="mock-sidebar-item active" style="width: 80%;"></div>
+                    <div class="mock-sidebar-item" style="width: 60%;"></div>
+                    <div class="mock-sidebar-item" style="width: 70%;"></div>
+                    <div class="mock-sidebar-item" style="width: 50%;"></div>
+                    <div class="mock-sidebar-item" style="width: 65%;"></div>
+                  </div>
+                  <div class="mock-main">
+                    <div class="mock-stat-card">
+                      <div class="mock-stat-label"></div>
+                      <div class="mock-stat-value"></div>
+                    </div>
+                    <div class="mock-stat-card">
+                      <div class="mock-stat-label"></div>
+                      <div class="mock-stat-value" style="width: 55%;"></div>
+                    </div>
+                    <div class="mock-stat-card">
+                      <div class="mock-stat-label"></div>
+                      <div class="mock-stat-value" style="width: 85%;"></div>
+                    </div>
+                    <div class="mock-chart">
+                      <div class="mock-chart-line">
+                        <svg viewBox="0 0 400 80" preserveAspectRatio="none">
+                          <path d="M0,60 C50,55 80,20 130,35 C180,50 200,15 250,25 C300,35 330,10 370,20 L400,15" stroke="#00d4ff" stroke-width="2" fill="none" opacity="0.5"/>
+                          <path d="M0,60 C50,55 80,20 130,35 C180,50 200,15 250,25 C300,35 330,10 370,20 L400,15 L400,80 L0,80 Z" fill="url(#heroChartGrad)" opacity="0.1"/>
+                          <defs>
+                            <linearGradient id="heroChartGrad" x1="0" y1="0" x2="0" y2="1">
+                              <stop offset="0%" stop-color="#00d4ff"/>
+                              <stop offset="100%" stop-color="transparent"/>
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating card: Operadores activos -->
+              <div class="hero__float-card hero__float-card--top">
+                <div class="hero__float-card-icon" style="background: rgba(40, 200, 64, 0.15); color: #28c840;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <div>
+                  <div class="hero__float-card-value">+12.5%</div>
+                  <div class="hero__float-card-label">Crecimiento mensual</div>
+                </div>
+              </div>
+
+              <!-- Floating card: Transacciones -->
+              <div class="hero__float-card hero__float-card--bottom">
+                <div class="hero__float-card-icon" style="background: rgba(0, 212, 255, 0.15); color: var(--accent-primary);">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <div class="hero__float-card-value">99.9%</div>
+                  <div class="hero__float-card-label">Disponibilidad</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEPARADOR -->
+      <div class="section-divider"></div>
+
+      <!-- 2. MARQUEE — Operadores confían en nosotros -->
+      <section class="section section--compact" style="background: var(--bg-primary); padding: var(--space-xl) 0;">
+        <div class="container">
+          <p style="text-align: center; font-size: var(--text-sm); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-lg);">Operadores que confían en nosotros</p>
+        </div>
+        <div class="marquee" data-marquee data-marquee-speed="35">
+          <div class="marquee__track">
+            <div class="marquee__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></svg>
+              <span>Operador Europa</span>
+            </div>
+            <div class="marquee__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>Operador LATAM</span>
+            </div>
+            <div class="marquee__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Operador Asia</span>
+            </div>
+            <div class="marquee__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Operador Caribe</span>
+            </div>
+            <div class="marquee__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></svg>
+              <span>Operador Norteamérica</span>
+            </div>
+            <div class="marquee__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>Operador África</span>
+            </div>
+            <div class="marquee__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Operador Oceanía</span>
+            </div>
+            <div class="marquee__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Operador Medio Oriente</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEPARADOR -->
+      <div class="section-divider"></div>
+
+      <!-- 3. FEATURES — Bento Grid -->
+      <section class="section features" style="background: var(--bg-primary);">
+        <div class="container">
+          <div class="section-header">
+            <p style="font-size: var(--text-sm); color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm); font-weight: 600;">Nuestros Servicios</p>
+            <h2 class="section-title" data-text-reveal>Lo que ofrecemos</h2>
+            <p class="section-subtitle" data-gsap="fade-up">
+              Herramientas B2B diseñadas para operadores con licencia que buscan eficiencia y control.
+            </p>
+          </div>
+          <div class="bento-grid">
+            <!-- Wide card -->
+            <div class="bento-grid__item--wide" data-aos="fade-up" data-aos-delay="0">
+              <div class="glass-card">
+                <div class="glass-card__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
+                  </svg>
+                </div>
+                <h3 class="glass-card__title">Panel de Administración</h3>
+                <p class="glass-card__text">Configuración y gestión centralizada del operador con control total sobre sus operaciones. Gestione usuarios, roles, configuraciones y accesos desde un solo lugar.</p>
+              </div>
+            </div>
+            <!-- Wide card -->
+            <div class="bento-grid__item--wide" data-aos="fade-up" data-aos-delay="100">
+              <div class="glass-card">
+                <div class="glass-card__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                  </svg>
+                </div>
+                <h3 class="glass-card__title">Conectividad con Agregadores</h3>
+                <p class="glass-card__text">Capa de integración con los Agregadores de Juegos seleccionados por el operador. Conecte múltiples proveedores simultáneamente con una sola integración.</p>
+              </div>
+            </div>
+            <!-- Normal cards -->
+            <div data-aos="fade-up" data-aos-delay="200">
+              <div class="glass-card">
+                <div class="glass-card__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>
+                  </svg>
+                </div>
+                <h3 class="glass-card__title">Reportes y Analítica</h3>
+                <p class="glass-card__text">Dashboards de informes y analítica operacional para la toma de decisiones basada en datos.</p>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <div class="glass-card">
+                <div class="glass-card__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <h3 class="glass-card__title">Cumplimiento</h3>
+                <p class="glass-card__text">Herramientas de monitoreo operacional y gestión de roles de usuario del lado del operador.</p>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400">
+              <div class="glass-card">
+                <div class="glass-card__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <h3 class="glass-card__title">Gestión de Usuarios</h3>
+                <p class="glass-card__text">Control granular de permisos y roles para todos los miembros del equipo operador.</p>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="500">
+              <div class="glass-card">
+                <div class="glass-card__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                  </svg>
+                </div>
+                <h3 class="glass-card__title">Monitoreo en Tiempo Real</h3>
+                <p class="glass-card__text">Supervisión continua de la salud del sistema, transacciones y rendimiento operativo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEPARADOR -->
+      <div class="section-divider"></div>
+
+      <!-- 4. CÓMO FUNCIONA (3 pasos) -->
+      <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header">
+            <p style="font-size: var(--text-sm); color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm); font-weight: 600;">Proceso</p>
+            <h2 class="section-title" data-text-reveal>Cómo Funciona</h2>
+            <p class="section-subtitle" data-gsap="fade-up">
+              Tres simples pasos para poner en marcha su operación.
+            </p>
+          </div>
+          <div class="steps">
+            <!-- Step 1 -->
+            <div class="step" data-aos="fade-up" data-aos-delay="0">
+              <span class="step__number">01</span>
+              <div class="step__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3 class="step__title">Conectar</h3>
+              <p class="step__text">Integre su plataforma con los Agregadores de Juegos a través de nuestra API unificada.</p>
+            </div>
+            <!-- Connector -->
+            <div class="step__connector" data-aos="fade" data-aos-delay="150">
+              <svg viewBox="0 0 80 2" preserveAspectRatio="none">
+                <line x1="0" y1="1" x2="80" y2="1" stroke="var(--accent-primary)" stroke-width="2" stroke-dasharray="6 4" opacity="0.4"/>
+              </svg>
+            </div>
+            <!-- Step 2 -->
+            <div class="step" data-aos="fade-up" data-aos-delay="200">
+              <span class="step__number">02</span>
+              <div class="step__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+              </div>
+              <h3 class="step__title">Configurar</h3>
+              <p class="step__text">Personalice su panel de administración, roles de usuario y parámetros operacionales.</p>
+            </div>
+            <!-- Connector -->
+            <div class="step__connector" data-aos="fade" data-aos-delay="350">
+              <svg viewBox="0 0 80 2" preserveAspectRatio="none">
+                <line x1="0" y1="1" x2="80" y2="1" stroke="var(--accent-primary)" stroke-width="2" stroke-dasharray="6 4" opacity="0.4"/>
+              </svg>
+            </div>
+            <!-- Step 3 -->
+            <div class="step" data-aos="fade-up" data-aos-delay="400">
+              <span class="step__number">03</span>
+              <div class="step__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <h3 class="step__title">Operar</h3>
+              <p class="step__text">Gestione su operación con reportes en tiempo real, analítica y herramientas de cumplimiento.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. DASHBOARD MOCKUP -->
+      <section class="section dashboard-section gradient-bg">
+        <div class="container">
+          <div class="dashboard-section__wrapper">
+            <div class="dashboard-section__content" data-gsap="fade-up">
+              <h2 class="section-title" data-text-reveal>Control total desde un solo panel</h2>
+              <p class="section-subtitle">
+                Nuestro panel de administración le permite al operador gestionar conexiones, monitorear métricas y administrar su plataforma de manera eficiente.
+              </p>
+              <a href="/plataforma.html" class="btn btn-secondary">Conocer la Plataforma</a>
+            </div>
+            <div class="dashboard-section__visual" data-gsap="fade-up">
+              <div class="dashboard-mockup-placeholder animate-float">
+                <div class="mock-topbar">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                </div>
+                <div class="mock-body">
+                  <div class="mock-sidebar">
+                    <div class="mock-sidebar-item active" style="width: 80%;"></div>
+                    <div class="mock-sidebar-item" style="width: 60%;"></div>
+                    <div class="mock-sidebar-item" style="width: 70%;"></div>
+                    <div class="mock-sidebar-item" style="width: 50%;"></div>
+                    <div class="mock-sidebar-item" style="width: 65%;"></div>
+                  </div>
+                  <div class="mock-main">
+                    <div class="mock-stat-card">
+                      <div class="mock-stat-label"></div>
+                      <div class="mock-stat-value"></div>
+                    </div>
+                    <div class="mock-stat-card">
+                      <div class="mock-stat-label"></div>
+                      <div class="mock-stat-value" style="width: 55%;"></div>
+                    </div>
+                    <div class="mock-stat-card">
+                      <div class="mock-stat-label"></div>
+                      <div class="mock-stat-value" style="width: 85%;"></div>
+                    </div>
+                    <div class="mock-chart">
+                      <div class="mock-chart-line">
+                        <svg viewBox="0 0 400 80" preserveAspectRatio="none">
+                          <path d="M0,60 C50,55 80,20 130,35 C180,50 200,15 250,25 C300,35 330,10 370,20 L400,15" stroke="#00d4ff" stroke-width="2" fill="none" opacity="0.5"/>
+                          <path d="M0,60 C50,55 80,20 130,35 C180,50 200,15 250,25 C300,35 330,10 370,20 L400,15 L400,80 L0,80 Z" fill="url(#chartGrad)" opacity="0.1"/>
+                          <defs>
+                            <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                              <stop offset="0%" stop-color="#00d4ff"/>
+                              <stop offset="100%" stop-color="transparent"/>
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEPARADOR -->
+      <div class="section-divider"></div>
+
+      <!-- 6. CARRUSEL — Vistas de la Plataforma -->
+      <section class="section carousel-section" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header">
+            <p style="font-size: var(--text-sm); color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: var(--space-sm); font-weight: 600;">Plataforma</p>
+            <h2 class="section-title" data-text-reveal>Vistas del Panel</h2>
+            <p class="section-subtitle" data-gsap="fade-up">
+              Explore las diferentes vistas y módulos del panel de administración.
+            </p>
+          </div>
+          <div class="carousel" data-carousel data-carousel-autoplay="true" data-carousel-per-view="1">
+            <div class="carousel__track">
+              <!-- Slide 1: Analytics -->
+              <div class="carousel__slide">
+                <div class="dashboard-mockup-placeholder" style="max-width: 800px; margin: 0 auto;">
+                  <div class="mock-topbar">
+                    <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                    <span style="margin-left: auto; font-size: 10px; color: var(--text-tertiary);">Analítica</span>
+                  </div>
+                  <div class="mock-body">
+                    <div class="mock-sidebar">
+                      <div class="mock-sidebar-item" style="width: 80%;"></div>
+                      <div class="mock-sidebar-item active" style="width: 60%;"></div>
+                      <div class="mock-sidebar-item" style="width: 70%;"></div>
+                      <div class="mock-sidebar-item" style="width: 50%;"></div>
+                    </div>
+                    <div class="mock-main">
+                      <div class="mock-stat-card"><div class="mock-stat-label"></div><div class="mock-stat-value"></div></div>
+                      <div class="mock-stat-card"><div class="mock-stat-label"></div><div class="mock-stat-value" style="width: 60%;"></div></div>
+                      <div class="mock-stat-card"><div class="mock-stat-label"></div><div class="mock-stat-value" style="width: 40%;"></div></div>
+                      <div class="mock-chart">
+                        <div class="mock-chart-line">
+                          <svg viewBox="0 0 400 80" preserveAspectRatio="none">
+                            <path d="M0,70 C60,50 100,30 160,40 C220,50 260,10 320,25 C360,35 380,15 400,20" stroke="#00d4ff" stroke-width="2" fill="none" opacity="0.5"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2: Usuarios -->
+              <div class="carousel__slide">
+                <div class="dashboard-mockup-placeholder" style="max-width: 800px; margin: 0 auto;">
+                  <div class="mock-topbar">
+                    <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                    <span style="margin-left: auto; font-size: 10px; color: var(--text-tertiary);">Usuarios</span>
+                  </div>
+                  <div class="mock-body">
+                    <div class="mock-sidebar">
+                      <div class="mock-sidebar-item" style="width: 80%;"></div>
+                      <div class="mock-sidebar-item" style="width: 60%;"></div>
+                      <div class="mock-sidebar-item active" style="width: 70%;"></div>
+                      <div class="mock-sidebar-item" style="width: 50%;"></div>
+                    </div>
+                    <div class="mock-main" style="grid-template-columns: 1fr; grid-template-rows: auto auto auto auto;">
+                      <div class="mock-stat-card" style="display: flex; align-items: center; gap: var(--space-sm);">
+                        <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--accent-primary); opacity: 0.3; flex-shrink: 0;"></div>
+                        <div style="flex: 1;"><div class="mock-stat-label" style="margin-bottom: 4px;"></div><div class="mock-stat-value" style="height: 8px; width: 40%;"></div></div>
+                      </div>
+                      <div class="mock-stat-card" style="display: flex; align-items: center; gap: var(--space-sm);">
+                        <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--accent-primary); opacity: 0.2; flex-shrink: 0;"></div>
+                        <div style="flex: 1;"><div class="mock-stat-label" style="margin-bottom: 4px;"></div><div class="mock-stat-value" style="height: 8px; width: 55%;"></div></div>
+                      </div>
+                      <div class="mock-stat-card" style="display: flex; align-items: center; gap: var(--space-sm);">
+                        <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--accent-primary); opacity: 0.25; flex-shrink: 0;"></div>
+                        <div style="flex: 1;"><div class="mock-stat-label" style="margin-bottom: 4px;"></div><div class="mock-stat-value" style="height: 8px; width: 35%;"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3: Integraciones -->
+              <div class="carousel__slide">
+                <div class="dashboard-mockup-placeholder" style="max-width: 800px; margin: 0 auto;">
+                  <div class="mock-topbar">
+                    <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                    <span style="margin-left: auto; font-size: 10px; color: var(--text-tertiary);">Integraciones</span>
+                  </div>
+                  <div class="mock-body">
+                    <div class="mock-sidebar">
+                      <div class="mock-sidebar-item" style="width: 80%;"></div>
+                      <div class="mock-sidebar-item" style="width: 60%;"></div>
+                      <div class="mock-sidebar-item" style="width: 70%;"></div>
+                      <div class="mock-sidebar-item active" style="width: 50%;"></div>
+                    </div>
+                    <div class="mock-main" style="grid-template-columns: repeat(2, 1fr);">
+                      <div class="mock-stat-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-md);">
+                        <div style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: rgba(0,212,255,0.1); margin-bottom: var(--space-xs);"></div>
+                        <div class="mock-stat-label" style="width: 60%;"></div>
+                        <div style="margin-top: 6px; width: 8px; height: 8px; border-radius: 50%; background: #28c840;"></div>
+                      </div>
+                      <div class="mock-stat-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-md);">
+                        <div style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: rgba(0,212,255,0.1); margin-bottom: var(--space-xs);"></div>
+                        <div class="mock-stat-label" style="width: 50%;"></div>
+                        <div style="margin-top: 6px; width: 8px; height: 8px; border-radius: 50%; background: #28c840;"></div>
+                      </div>
+                      <div class="mock-stat-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-md);">
+                        <div style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: rgba(0,212,255,0.1); margin-bottom: var(--space-xs);"></div>
+                        <div class="mock-stat-label" style="width: 55%;"></div>
+                        <div style="margin-top: 6px; width: 8px; height: 8px; border-radius: 50%; background: #febc2e;"></div>
+                      </div>
+                      <div class="mock-stat-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-md);">
+                        <div style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: rgba(0,212,255,0.1); margin-bottom: var(--space-xs);"></div>
+                        <div class="mock-stat-label" style="width: 45%;"></div>
+                        <div style="margin-top: 6px; width: 8px; height: 8px; border-radius: 50%; background: #28c840;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4: Configuración -->
+              <div class="carousel__slide">
+                <div class="dashboard-mockup-placeholder" style="max-width: 800px; margin: 0 auto;">
+                  <div class="mock-topbar">
+                    <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                    <span style="margin-left: auto; font-size: 10px; color: var(--text-tertiary);">Configuración</span>
+                  </div>
+                  <div class="mock-body">
+                    <div class="mock-sidebar">
+                      <div class="mock-sidebar-item" style="width: 80%;"></div>
+                      <div class="mock-sidebar-item" style="width: 60%;"></div>
+                      <div class="mock-sidebar-item" style="width: 70%;"></div>
+                      <div class="mock-sidebar-item" style="width: 50%;"></div>
+                      <div class="mock-sidebar-item active" style="width: 65%;"></div>
+                    </div>
+                    <div class="mock-main" style="grid-template-columns: 1fr; grid-template-rows: auto auto auto auto auto;">
+                      <div class="mock-stat-card" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="mock-stat-label" style="width: 30%; margin: 0;"></div>
+                        <div style="width: 36px; height: 18px; border-radius: 9px; background: var(--accent-primary); opacity: 0.4;"></div>
+                      </div>
+                      <div class="mock-stat-card" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="mock-stat-label" style="width: 40%; margin: 0;"></div>
+                        <div style="width: 36px; height: 18px; border-radius: 9px; background: rgba(255,255,255,0.1);"></div>
+                      </div>
+                      <div class="mock-stat-card" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="mock-stat-label" style="width: 35%; margin: 0;"></div>
+                        <div style="width: 36px; height: 18px; border-radius: 9px; background: var(--accent-primary); opacity: 0.4;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel__arrow carousel__arrow--prev" data-carousel-prev aria-label="Anterior">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="carousel__arrow carousel__arrow--next" data-carousel-next aria-label="Siguiente">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <div class="carousel__dots" data-carousel-dots></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEPARADOR -->
+      <div class="section-divider"></div>
+
+      <!-- 7. STATS -->
+      <section class="section stats" style="background: var(--bg-primary);">
+        <div class="container">
+          <div class="stats__grid">
+            <div class="stat" data-aos="fade-up" data-aos-delay="0">
+              <div class="stat__number" data-counter="99" data-suffix="%">0%</div>
+              <div class="stat__label">Disponibilidad de plataforma</div>
+            </div>
+            <div class="stat" data-aos="fade-up" data-aos-delay="100">
+              <div class="stat__number" data-counter="50" data-suffix="+">0</div>
+              <div class="stat__label">Operadores conectados</div>
+            </div>
+            <div class="stat" data-aos="fade-up" data-aos-delay="200">
+              <div class="stat__number" data-counter="24" data-suffix="/7">0</div>
+              <div class="stat__label">Monitoreo operacional</div>
+            </div>
+            <div class="stat" data-aos="fade-up" data-aos-delay="300">
+              <div class="stat__number" data-counter="10" data-suffix="+">0</div>
+              <div class="stat__label">Jurisdicciones soportadas</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEPARADOR -->
+      <div class="section-divider"></div>
+
+      <!-- 8. CTA FINAL -->
+      <section class="section cta-section" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="cta-section__inner">
+            <div class="cta-section__glow"></div>
+            <h2 class="section-title" data-text-reveal style="text-align: center;">
+              ¿Listo para conectar su operación?
+            </h2>
+            <p class="section-subtitle" style="margin-left: auto; margin-right: auto; text-align: center;" data-gsap="fade-up">
+              Hable con nuestro equipo para conocer cómo nuestra plataforma puede potenciar su operación B2B.
+            </p>
+            <div style="text-align: center;" data-gsap="fade-up">
+              <a href="/contacto.html" class="btn btn-primary">Solicitar una Demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{> footer}}
+
+    <script type="module">
+      import '/src/js/main.js'
+      import { initParticles } from '/src/js/animations/particles.js'
+      import { initHeroAnimation } from '/src/js/animations/hero-animation.js'
+      import { initScrollAnimations } from '/src/js/animations/scroll-animations.js'
+      import { initCounters } from '/src/js/animations/counter.js'
+      import { initTextReveal } from '/src/js/animations/text-reveal.js'
+      import { Carousel } from '/src/js/components/carousel.js'
+      import { initMarquee } from '/src/js/components/marquee.js'
+
+      initParticles('heroParticles')
+      initHeroAnimation()
+      initScrollAnimations()
+      initCounters()
+      initTextReveal()
+      initMarquee()
+
+      // Initialize all carousels
+      document.querySelectorAll('[data-carousel]').forEach(el => {
+        new Carousel(el)
+      })
+    </script>
+  </body>
+</html>

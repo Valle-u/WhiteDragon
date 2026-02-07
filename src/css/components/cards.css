@@ -1,0 +1,87 @@
+/* ========================================
+   GLASS CARDS
+   ======================================== */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--accent-primary), transparent 40%, transparent 60%, var(--accent-primary));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow), var(--shadow-card);
+}
+
+.glass-card:hover::before {
+  opacity: 0.2;
+}
+
+.glass-card__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--accent-subtle);
+  margin-bottom: var(--space-md);
+  color: var(--accent-primary);
+}
+
+.glass-card__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.glass-card__title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.glass-card__text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Cards grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  perspective: 800px;
+}
+
+/* Exclusion card variant (for "What we DON'T do") */
+.glass-card--exclusion {
+  border-color: rgba(255, 82, 82, 0.15);
+}
+
+.glass-card--exclusion .glass-card__icon {
+  background: rgba(255, 82, 82, 0.1);
+  color: var(--error);
+}
+
+.glass-card--exclusion::before {
+  background: linear-gradient(135deg, var(--error), transparent 40%, transparent 60%, var(--error));
+}

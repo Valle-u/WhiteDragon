@@ -1,0 +1,106 @@
+/* ========================================
+   TIMELINE
+   ======================================== */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-lg) 0;
+}
+
+/* Center line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--glass-border);
+  transform: translateX(-50%);
+}
+
+.timeline__item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-xl);
+}
+
+/* Alternating sides */
+.timeline__item:nth-child(odd) {
+  flex-direction: row;
+  padding-right: calc(50% + var(--space-lg));
+}
+
+.timeline__item:nth-child(even) {
+  flex-direction: row-reverse;
+  padding-left: calc(50% + var(--space-lg));
+}
+
+/* Dot on the line */
+.timeline__item::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: var(--space-md);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  border: 3px solid var(--bg-primary);
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
+}
+
+.timeline__year {
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  transform: translateX(-50%) translateY(-100%);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--accent-primary);
+  background: var(--bg-primary);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.timeline__content {
+  width: 100%;
+}
+
+.timeline__content h3 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.timeline__content p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 767px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline__item:nth-child(odd),
+  .timeline__item:nth-child(even) {
+    flex-direction: row;
+    padding-right: 0;
+    padding-left: calc(20px + var(--space-xl));
+  }
+
+  .timeline__item::after {
+    left: 20px;
+  }
+
+  .timeline__year {
+    left: 20px;
+  }
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    {{> head}}
+    <title>Cumplimiento — White Dragon</title>
+  </head>
+  <body>
+    {{> navbar}}
+
+    <main>
+      <!-- HERO SUB -->
+      <section class="hero hero--sub">
+        <div class="hero__content">
+          <div class="hero__badge"><span>Regulatorio</span></div>
+          <h1 class="hero__title">Cumplimiento y <span class="hero__title-accent">Límites Operativos</span></h1>
+          <p class="hero__subtitle">Transparencia sobre nuestro alcance operativo y responsabilidades.</p>
+        </div>
+      </section>
+
+      <!-- ALCANCE -->
+      <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+          <h2 class="section-title" data-gsap="fade-up">Alcance</h2>
+          <div class="glass-card" style="max-width: 800px;" data-aos="fade-up">
+            <p style="color: var(--text-secondary); line-height: 1.8;">
+              Whitedragonsoftware LLC proporciona software B2B a operadores con licencia y socios B2B. Los operadores son los únicos responsables del licenciamiento, AML/KYC, pagos, cuentas de jugadores y todas las obligaciones dirigidas a los jugadores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXCLUSIONES -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title" data-gsap="fade-up">Exclusiones explícitas</h2>
+          <p class="section-subtitle" data-gsap="fade-up">Declaramos de forma transparente lo que NO hacemos.</p>
+          <div class="cards-grid" style="max-width: 900px;">
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="0">
+              <h3 class="glass-card__title">No operamos juegos de azar</h3>
+            </div>
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="50">
+              <h3 class="glass-card__title">No ofrecemos servicios a jugadores individuales</h3>
+            </div>
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="glass-card__title">No aceptamos apuestas ni wagers</h3>
+            </div>
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="150">
+              <h3 class="glass-card__title">No gestionamos fondos de jugadores</h3>
+            </div>
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="glass-card__title">No proporcionamos billeteras ni procesamiento de pagos</h3>
+            </div>
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="250">
+              <h3 class="glass-card__title">No ofrecemos soporte al jugador</h3>
+            </div>
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="300">
+              <h3 class="glass-card__title">No controlamos RTP, jackpots ni resultados de juegos</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SANCIONES -->
+      <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+          <h2 class="section-title" data-gsap="fade-up">Sanciones y mercados prohibidos</h2>
+          <div class="glass-card" style="max-width: 800px;" data-aos="fade-up">
+            <p style="color: var(--text-secondary); line-height: 1.8;">
+              No damos soporte a jurisdicciones sancionadas y nos reservamos el derecho de rechazar el servicio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIN ASESORÍA REGULATORIA -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title" data-gsap="fade-up">Aviso importante</h2>
+          <div class="glass-card" style="max-width: 800px; border-color: var(--warning);" data-aos="fade-up">
+            <div class="glass-card__icon" style="background: rgba(255, 171, 0, 0.1); color: var(--warning);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <p style="color: var(--text-secondary); line-height: 1.8;">
+              Nada en este sitio web constituye asesoramiento legal, regulatorio o de licenciamiento.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{> footer}}
+
+    <script type="module">
+      import '/src/js/main.js'
+      import { initScrollAnimations } from '/src/js/animations/scroll-animations.js'
+      initScrollAnimations()
+    </script>
+  </body>
+</html>

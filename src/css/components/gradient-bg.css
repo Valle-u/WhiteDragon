@@ -1,0 +1,55 @@
+/* ========================================
+   GRADIENT BACKGROUNDS
+   ======================================== */
+.gradient-bg {
+  position: relative;
+}
+
+.gradient-bg::before,
+.gradient-bg::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradient-bg::before {
+  background: var(--accent-primary);
+  top: -200px;
+  left: -200px;
+  animation: gradientFloat 20s ease-in-out infinite;
+}
+
+.gradient-bg::after {
+  background: #7dd3fc;
+  bottom: -200px;
+  right: -200px;
+  animation: gradientFloat 25s ease-in-out infinite reverse;
+}
+
+.gradient-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes gradientFloat {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(30px, -20px); }
+  66% { transform: translate(-20px, 30px); }
+}
+
+/* Text reveal word wrapping */
+.word-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.word-inner {
+  display: inline-block;
+}

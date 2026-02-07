@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    {{> head}}
+    <title>Plataforma — White Dragon</title>
+  </head>
+  <body>
+    {{> navbar}}
+
+    <main>
+      <!-- HERO SUB -->
+      <section class="hero hero--sub">
+        <div class="hero__content">
+          <div class="hero__badge"><span>Producto</span></div>
+          <h1 class="hero__title" data-text-reveal>Nuestra <span class="hero__title-accent">Plataforma</span></h1>
+          <p class="hero__subtitle">Software B2B para la gestión operativa de operadores con licencia.</p>
+        </div>
+      </section>
+
+      <!-- TABS: Módulos de la plataforma -->
+      <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: var(--space-xl);">
+            <h2 class="section-title" data-text-reveal>Módulos de la plataforma</h2>
+            <p class="section-subtitle" style="margin-left: auto; margin-right: auto;" data-gsap="fade-up">
+              Explore las distintas capacidades del panel de administración.
+            </p>
+          </div>
+
+          <!-- Tab navigation -->
+          <div class="tabs__nav" style="justify-content: center;">
+            <button class="tabs__btn active" data-tab-btn="panel">Panel Admin</button>
+            <button class="tabs__btn" data-tab-btn="conectividad">Conectividad</button>
+            <button class="tabs__btn" data-tab-btn="reportes">Reportes</button>
+            <button class="tabs__btn" data-tab-btn="roles">Roles</button>
+          </div>
+
+          <!-- Tab panels -->
+          <div class="tabs__panel" data-tab-panel="panel" style="display: block;">
+            <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+              <div style="display: flex; gap: var(--space-lg); align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 280px;">
+                  <h3 style="font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-sm);">Panel de Administración</h3>
+                  <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                    El panel centralizado permite a los operadores gestionar todas las configuraciones, monitorear métricas en tiempo real y administrar su plataforma de manera eficiente.
+                  </p>
+                  <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-sm);">
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Dashboard con métricas clave
+                    </li>
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Configuración centralizada
+                    </li>
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Alertas y notificaciones
+                    </li>
+                  </ul>
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                  <div class="dashboard-mockup-placeholder" style="aspect-ratio: 16/10;">
+                    <div class="mock-topbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                    <div class="mock-body">
+                      <div class="mock-sidebar">
+                        <div class="mock-sidebar-item active" style="width: 80%;"></div>
+                        <div class="mock-sidebar-item" style="width: 60%;"></div>
+                        <div class="mock-sidebar-item" style="width: 70%;"></div>
+                      </div>
+                      <div class="mock-main">
+                        <div class="mock-stat-card"><div class="mock-stat-label"></div><div class="mock-stat-value"></div></div>
+                        <div class="mock-stat-card"><div class="mock-stat-label"></div><div class="mock-stat-value" style="width: 55%;"></div></div>
+                        <div class="mock-stat-card"><div class="mock-stat-label"></div><div class="mock-stat-value" style="width: 85%;"></div></div>
+                        <div class="mock-chart"><div class="mock-chart-line">
+                          <svg viewBox="0 0 400 80" preserveAspectRatio="none"><path d="M0,60 C50,55 80,20 130,35 C180,50 200,15 250,25 C300,35 330,10 370,20 L400,15" stroke="#00d4ff" stroke-width="2" fill="none" opacity="0.5"/></svg>
+                        </div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__panel" data-tab-panel="conectividad" style="display: none;">
+            <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+              <div style="display: flex; gap: var(--space-lg); align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 280px;">
+                  <h3 style="font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-sm);">Conectividad con Agregadores</h3>
+                  <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                    Nuestra capa de integración permite conectar con los Agregadores de Juegos seleccionados por el operador de forma fluida y segura.
+                  </p>
+                  <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-sm);">
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> API unificada
+                    </li>
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Múltiples agregadores simultáneos
+                    </li>
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Monitoreo de estado en tiempo real
+                    </li>
+                  </ul>
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                  <div class="dashboard-mockup-placeholder" style="aspect-ratio: 16/10;">
+                    <div class="mock-topbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                    <div class="mock-body">
+                      <div class="mock-sidebar">
+                        <div class="mock-sidebar-item" style="width: 80%;"></div>
+                        <div class="mock-sidebar-item" style="width: 60%;"></div>
+                        <div class="mock-sidebar-item" style="width: 70%;"></div>
+                        <div class="mock-sidebar-item active" style="width: 50%;"></div>
+                      </div>
+                      <div class="mock-main" style="grid-template-columns: repeat(2, 1fr);">
+                        <div class="mock-stat-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-md);">
+                          <div style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: rgba(0,212,255,0.1); margin-bottom: var(--space-xs);"></div>
+                          <div class="mock-stat-label" style="width: 60%;"></div>
+                          <div style="margin-top: 6px; width: 8px; height: 8px; border-radius: 50%; background: #28c840;"></div>
+                        </div>
+                        <div class="mock-stat-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-md);">
+                          <div style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: rgba(0,212,255,0.1); margin-bottom: var(--space-xs);"></div>
+                          <div class="mock-stat-label" style="width: 50%;"></div>
+                          <div style="margin-top: 6px; width: 8px; height: 8px; border-radius: 50%; background: #28c840;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__panel" data-tab-panel="reportes" style="display: none;">
+            <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+              <div style="display: flex; gap: var(--space-lg); align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 280px;">
+                  <h3 style="font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-sm);">Reportes y Analítica</h3>
+                  <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                    Dashboards de informes operacionales que permiten tomar decisiones basadas en datos con visibilidad completa de las métricas del negocio.
+                  </p>
+                  <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-sm);">
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Reportes personalizables
+                    </li>
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Exportación de datos
+                    </li>
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Métricas en tiempo real
+                    </li>
+                  </ul>
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                  <div class="dashboard-mockup-placeholder" style="aspect-ratio: 16/10;">
+                    <div class="mock-topbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                    <div class="mock-body">
+                      <div class="mock-sidebar">
+                        <div class="mock-sidebar-item" style="width: 80%;"></div>
+                        <div class="mock-sidebar-item active" style="width: 60%;"></div>
+                        <div class="mock-sidebar-item" style="width: 70%;"></div>
+                      </div>
+                      <div class="mock-main">
+                        <div class="mock-stat-card"><div class="mock-stat-label"></div><div class="mock-stat-value"></div></div>
+                        <div class="mock-stat-card"><div class="mock-stat-label"></div><div class="mock-stat-value" style="width: 60%;"></div></div>
+                        <div class="mock-stat-card"><div class="mock-stat-label"></div><div class="mock-stat-value" style="width: 40%;"></div></div>
+                        <div class="mock-chart"><div class="mock-chart-line">
+                          <svg viewBox="0 0 400 80" preserveAspectRatio="none"><path d="M0,70 C60,50 100,30 160,40 C220,50 260,10 320,25 C360,35 380,15 400,20" stroke="#00d4ff" stroke-width="2" fill="none" opacity="0.5"/></svg>
+                        </div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__panel" data-tab-panel="roles" style="display: none;">
+            <div class="glass-card" style="max-width: 800px; margin: 0 auto;">
+              <div style="display: flex; gap: var(--space-lg); align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 280px;">
+                  <h3 style="font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-sm);">Roles y Control de Acceso</h3>
+                  <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-md);">
+                    Gestión granular de permisos y roles para todos los miembros del equipo operador, con auditoría completa de acciones.
+                  </p>
+                  <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-sm);">
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Roles personalizables
+                    </li>
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Permisos granulares
+                    </li>
+                    <li style="color: var(--text-secondary); font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-sm);">
+                      <span style="color: var(--accent-primary);">&#10003;</span> Logs de auditoría
+                    </li>
+                  </ul>
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                  <div class="dashboard-mockup-placeholder" style="aspect-ratio: 16/10;">
+                    <div class="mock-topbar"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
+                    <div class="mock-body">
+                      <div class="mock-sidebar">
+                        <div class="mock-sidebar-item" style="width: 80%;"></div>
+                        <div class="mock-sidebar-item" style="width: 60%;"></div>
+                        <div class="mock-sidebar-item" style="width: 70%;"></div>
+                        <div class="mock-sidebar-item" style="width: 50%;"></div>
+                        <div class="mock-sidebar-item active" style="width: 65%;"></div>
+                      </div>
+                      <div class="mock-main" style="grid-template-columns: 1fr; grid-template-rows: auto auto auto;">
+                        <div class="mock-stat-card" style="display: flex; align-items: center; gap: var(--space-sm);">
+                          <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--accent-primary); opacity: 0.3; flex-shrink: 0;"></div>
+                          <div style="flex: 1;"><div class="mock-stat-label" style="margin-bottom: 4px;"></div><div class="mock-stat-value" style="height: 8px; width: 40%;"></div></div>
+                        </div>
+                        <div class="mock-stat-card" style="display: flex; align-items: center; gap: var(--space-sm);">
+                          <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--accent-primary); opacity: 0.2; flex-shrink: 0;"></div>
+                          <div style="flex: 1;"><div class="mock-stat-label" style="margin-bottom: 4px;"></div><div class="mock-stat-value" style="height: 8px; width: 55%;"></div></div>
+                        </div>
+                        <div class="mock-stat-card" style="display: flex; align-items: center; gap: var(--space-sm);">
+                          <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--accent-primary); opacity: 0.25; flex-shrink: 0;"></div>
+                          <div style="flex: 1;"><div class="mock-stat-label" style="margin-bottom: 4px;"></div><div class="mock-stat-value" style="height: 8px; width: 35%;"></div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUÉ NO HACE -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title" data-text-reveal style="text-align: center;">Qué NO hace la plataforma</h2>
+          <p class="section-subtitle" data-gsap="fade-up" style="text-align: center; margin-left: auto; margin-right: auto;">Nuestro alcance es exclusivamente B2B. No ofrecemos servicios al consumidor final.</p>
+          <div class="cards-grid" style="max-width: 800px; margin: 0 auto;">
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="0">
+              <div class="glass-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/>
+                </svg>
+              </div>
+              <h3 class="glass-card__title">Sin servicios a jugadores</h3>
+              <p class="glass-card__text">No proporcionamos servicios dirigidos a jugadores individuales.</p>
+            </div>
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="100">
+              <div class="glass-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/>
+                </svg>
+              </div>
+              <h3 class="glass-card__title">Sin apuestas ni wagers</h3>
+              <p class="glass-card__text">No aceptamos apuestas ni procesamos wagers de ningún tipo.</p>
+            </div>
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="200">
+              <div class="glass-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/>
+                </svg>
+              </div>
+              <h3 class="glass-card__title">Sin fondos ni billeteras</h3>
+              <p class="glass-card__text">No gestionamos fondos de jugadores ni proporcionamos billeteras digitales o procesamiento de pagos.</p>
+            </div>
+            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="300">
+              <div class="glass-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/>
+                </svg>
+              </div>
+              <h3 class="glass-card__title">Sin control de juegos</h3>
+              <p class="glass-card__text">No controlamos RTP, lógica de jackpot ni resultados de juegos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{> footer}}
+
+    <script type="module">
+      import '/src/js/main.js'
+      import { initScrollAnimations } from '/src/js/animations/scroll-animations.js'
+      import { initTextReveal } from '/src/js/animations/text-reveal.js'
+      import { initTabs } from '/src/js/components/tabs.js'
+      initScrollAnimations()
+      initTextReveal()
+      initTabs()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+/* ========================================
+   CAROUSEL — Estilo mejorado
+   ======================================== */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-lg) 0;
+}
+
+.carousel__track {
+  display: flex;
+  gap: var(--space-lg);
+  will-change: transform;
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0 var(--space-md);
+}
+
+/* Carousel wrapper — sección con borde y fondo visible */
+.carousel-section {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* Arrows — Estilo limpio */
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.carousel__arrow:hover {
+  background: var(--accent-primary);
+  color: #000000;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.carousel__arrow--prev {
+  left: var(--space-lg);
+}
+
+.carousel__arrow--next {
+  right: var(--space-lg);
+}
+
+.carousel__arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Dots — Estilo pill */
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.carousel__dot {
+  width: 32px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel__dot.active {
+  background: var(--accent-primary);
+  width: 48px;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+.carousel__dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 767px) {
+  .carousel__arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel__arrow--prev { left: var(--space-sm); }
+  .carousel__arrow--next { right: var(--space-sm); }
+
+  .carousel__dot {
+    width: 24px;
+    height: 3px;
+  }
+
+  .carousel__dot.active {
+    width: 36px;
+  }
+}

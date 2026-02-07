@@ -1,0 +1,50 @@
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+/* Text alignment */
+@media (max-width: 767px) {
+  .md\:text-center {
+    text-align: center;
+  }
+}
+
+/* Hide/show */
+.hide-mobile {
+  display: block;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+/* Container responsive padding */
+@media (max-width: 639px) {
+  .container {
+    padding: 0 var(--space-md);
+  }
+}
+
+/* Section responsive padding */
+@media (max-width: 767px) {
+  .section {
+    padding: var(--space-xl) 0;
+  }
+}
+
+/* Responsive text */
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: var(--text-5xl);
+  }
+}

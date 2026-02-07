@@ -1,0 +1,55 @@
+/* ========================================
+   MARQUEE (INFINITE SCROLL)
+   ======================================== */
+.marquee {
+  overflow: hidden;
+  padding: var(--space-md) 0;
+}
+
+.marquee__track {
+  display: flex;
+  gap: var(--space-lg);
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee__item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--text-tertiary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.marquee__item:hover {
+  color: var(--text-secondary);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.marquee__item svg {
+  width: 18px;
+  height: 18px;
+  opacity: 0.5;
+}
+
+.marquee-label {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+}
+
+.section--compact {
+  padding: var(--space-xl) 0 var(--space-lg);
+}
