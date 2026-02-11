@@ -1,7 +1,85 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="White Dragon - Plataforma de operador y panel de administración B2B para conectividad con agregadores de juegos." />
-<link rel="icon" type="image/svg+xml" href="/src/assets/svg/logo.svg" />
+<link rel="icon" type="image/png" href="/src/assets/img/isotipo.png" />
+<link rel="stylesheet" href="/src/css/main.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+  document.documentElement.classList.add('is-preloading')
+</script>
+
+<style>
+  html.is-preloading body {
+    overflow: hidden;
+    background: #030812;
+  }
+
+  html.is-preloading body > *:not(#appLoader) {
+    visibility: hidden;
+  }
+
+  #appLoader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(45% 45% at 50% 40%, rgba(111, 200, 255, 0.16), transparent 70%),
+      linear-gradient(145deg, #02060f, #040c1e 55%, #02060f);
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+
+  .app-loader__inner {
+    position: relative;
+    display: grid;
+    place-items: center;
+    gap: 0.9rem;
+  }
+
+  .app-loader__logo {
+    width: 78px;
+    height: 78px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(123, 208, 255, 0.42));
+    animation: loaderFloat 1.8s ease-in-out infinite;
+  }
+
+  .app-loader__ring {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    border: 1px solid rgba(166, 232, 255, 0.25);
+    border-top-color: rgba(166, 232, 255, 0.95);
+    animation: loaderSpin 1.1s linear infinite;
+    position: absolute;
+  }
+
+  .app-loader__text {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(214, 244, 255, 0.86);
+  }
+
+  html:not(.is-preloading) #appLoader,
+  #appLoader.is-hiding {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  @keyframes loaderSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes loaderFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+</style>

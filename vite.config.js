@@ -3,6 +3,16 @@ import { defineConfig } from 'vite'
 import handlebars from 'vite-plugin-handlebars'
 
 export default defineConfig({
+  assetsInclude: ['**/*.glb'],
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    strictPort: true,
+    allowedHosts: ['.loca.lt', 'localhost', '127.0.0.1'],
+    proxy: {
+      '/api': 'http://localhost:8787',
+    },
+  },
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, 'partials'),

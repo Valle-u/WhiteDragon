@@ -5,11 +5,25 @@ gsap.registerPlugin(ScrollTrigger)
 
 export function initTextReveal() {
   document.querySelectorAll('[data-text-reveal]').forEach((el) => {
-    // Preserve inner HTML (including spans like .hero__title-accent)
-    const original = el.innerHTML
-    // Split text nodes into words while keeping HTML tags intact
-    const fragment = document.createElement('div')
-    fragment.innerHTML = original
+    // SAFETY: Skip elements inside hero sections — hero has its own animation
+    if (el.closest('.hero')) return
+
+    // SAFETY: Skip elements that use background-clip: text (gradient text)
+    const style = window.getComputedStyle(el)
+    if (style.webkitBackgroundClip === 'text' || style.backgroundClip === 'text') return
+
+    // If already processed, reset to clean state
+    if (el.dataset.textRevealReady) {
+      const existingWords = el.querySelectorAll('.word-inner')
+      if (existingWords.length) {
+        gsap.killTweensOf(existingWords)
+        gsap.set(existingWords, { y: 0, opacity: 1, clearProps: 'all' })
+      }
+      return
+    }
+
+    // Mark as processed to prevent double-processing
+    el.dataset.textRevealReady = 'true'
 
     const processNode = (node) => {
       if (node.nodeType === Node.TEXT_NODE) {
@@ -21,8 +35,12 @@ export function initTextReveal() {
           } else {
             const wrap = document.createElement('span')
             wrap.className = 'word-wrap'
+            wrap.style.display = 'inline-block'
+            wrap.style.overflow = 'hidden'
+            wrap.style.verticalAlign = 'top'
             const inner = document.createElement('span')
             inner.className = 'word-inner'
+            inner.style.display = 'inline-block'
             inner.textContent = word
             wrap.appendChild(inner)
             frag.appendChild(wrap)
@@ -30,7 +48,6 @@ export function initTextReveal() {
         })
         node.parentNode.replaceChild(frag, node)
       } else if (node.nodeType === Node.ELEMENT_NODE) {
-        // Process children of elements (like <span class="hero__title-accent">)
         Array.from(node.childNodes).forEach(processNode)
       }
     }
@@ -39,12 +56,17 @@ export function initTextReveal() {
 
     const wordInners = el.querySelectorAll('.word-inner')
 
-    // Check if element is already in viewport (hero, top of page)
+    if (!wordInners.length) return
+
+    // First: set all words to their final (visible) state explicitly
+    gsap.set(wordInners, { y: 0, opacity: 1 })
+
+    // Check if element is in viewport
     const rect = el.getBoundingClientRect()
     const isInView = rect.top < window.innerHeight && rect.bottom > 0
 
     if (isInView) {
-      // Animate immediately for elements already visible
+      // Small delay for page-load feel, then animate from hidden to visible
       gsap.from(wordInners, {
         y: '100%',
         opacity: 0,
@@ -54,7 +76,6 @@ export function initTextReveal() {
         delay: 0.3,
       })
     } else {
-      // Use ScrollTrigger for elements below the fold
       gsap.from(wordInners, {
         scrollTrigger: {
           trigger: el,

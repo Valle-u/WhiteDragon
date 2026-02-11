@@ -108,7 +108,7 @@
   gap: var(--space-md);
 }
 
-@media (max-width: 639px) {
+@media (max-width: 767px) {
   .form-row {
     grid-template-columns: 1fr;
   }

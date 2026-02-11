@@ -53,13 +53,17 @@
 }
 
 .glass-card__title {
+  font-family: var(--font-display);
   font-size: var(--text-xl);
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin-bottom: var(--space-sm);
 }
 
 .glass-card__text {
+  font-family: var(--font-primary);
   font-size: var(--text-sm);
+  font-weight: 500;
   color: var(--text-secondary);
   line-height: 1.7;
 }

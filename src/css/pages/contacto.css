@@ -1,0 +1,152 @@
+.contact-main {
+  --contact-content-width: 1120px;
+}
+
+.contact-main .section {
+  padding: clamp(4.4rem, 9vh, 7rem) 0;
+}
+
+.contact-hero {
+  min-height: 52vh;
+}
+
+.contact-main .section-header {
+  margin-bottom: clamp(1.6rem, 3.6vh, 2.4rem);
+}
+
+.contact-main .section-title {
+  letter-spacing: -0.022em;
+  line-height: 1.14;
+}
+
+.contact-main .section-subtitle {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-section {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(150, 221, 255, 0.06);
+  border-bottom: 1px solid rgba(150, 221, 255, 0.05);
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  inset: -30% -12%;
+  background: radial-gradient(440px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(114, 206, 255, 0.08), transparent 62%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section--base-a {
+  background: linear-gradient(180deg, #03060c, #040910 56%, #03060c);
+}
+
+.contact-layout {
+  max-width: var(--contact-content-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.05fr);
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.contact-info-card,
+.contact-form-card {
+  padding: var(--space-lg);
+}
+
+.contact-list {
+  margin: 0.9rem 0 1.1rem;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.56rem;
+  color: var(--text-secondary);
+  line-height: 1.58;
+}
+
+.contact-list li::marker {
+  color: var(--accent-primary);
+}
+
+.contact-whatsapp-btn {
+  width: 100%;
+  border-color: rgba(44, 203, 120, 0.66);
+  color: #77ecaf;
+}
+
+.contact-whatsapp-btn:hover {
+  background: rgba(43, 190, 112, 0.11);
+  box-shadow: 0 8px 24px rgba(36, 156, 92, 0.26);
+}
+
+.contact-whatsapp-note {
+  margin: 0.7rem 0 0;
+  color: var(--text-tertiary);
+  font-size: var(--text-xs);
+  line-height: 1.55;
+}
+
+.contact-submit {
+  width: 100%;
+}
+
+.contact-status {
+  margin: 0.35rem 0 0.95rem;
+  padding: 0.72rem 0.84rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-size: var(--text-sm);
+  line-height: 1.45;
+}
+
+.contact-status.is-success {
+  border-color: rgba(40, 204, 118, 0.45);
+  background: rgba(40, 204, 118, 0.11);
+  color: #9ef0c4;
+}
+
+.contact-status.is-error {
+  border-color: rgba(255, 82, 82, 0.42);
+  background: rgba(255, 82, 82, 0.11);
+  color: #ffb2b2;
+}
+
+.form-checkbox.is-error {
+  outline: 1px solid var(--error);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.contact-success {
+  margin-top: 1rem;
+  padding: 0.95rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.contact-success .glass-card__title {
+  margin-bottom: 0.45rem;
+}
+
+@media (max-width: 1023px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-info-card,
+  .contact-form-card {
+    padding: 1.2rem 1rem;
+  }
+}

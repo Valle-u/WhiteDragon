@@ -5,15 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:api": "node server/index.js",
+    "dev:full": "concurrently \"npm:dev\" \"npm:dev:api\"",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server/index.js"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "vite": "^7.2.4"
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
     "gsap": "^3.14.2",
+    "resend": "^6.9.1",
     "vite-plugin-handlebars": "^2.0.0"
   }
 }

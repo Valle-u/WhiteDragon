@@ -2,119 +2,125 @@
 <html lang="es">
   <head>
     {{> head}}
-    <title>Empresa — White Dragon</title>
+    <title>Empresa — Whitedragonsoftware LLC</title>
   </head>
   <body>
     {{> navbar}}
 
-    <main>
-      <!-- HERO SUB -->
-      <section class="hero hero--sub">
+    <main class="company-main">
+      <section class="hero hero--sub company-hero">
         <div class="hero__content">
-          <div class="hero__badge"><span>Sobre nosotros</span></div>
-          <h1 class="hero__title" data-text-reveal>Nuestra <span class="hero__title-accent">Empresa</span></h1>
-          <p class="hero__subtitle">Proveedor de software B2B enfocado en la habilitación de operaciones de back-office.</p>
+          <div class="hero__badge"><span>Empresa</span></div>
+          <h1 class="hero__title">Whitedragonsoftware <span class="hero__title-accent">LLC</span></h1>
+          <p class="hero__subtitle">Compañía tecnológica B2B especializada en plataformas de back-office, conectividad con Game Aggregators y operación técnica para operadores.</p>
         </div>
       </section>
 
-      <!-- SOBRE NOSOTROS -->
-      <section class="section" style="background: var(--bg-secondary);">
+      <section class="section company-section company-section--base-a">
         <div class="container">
-          <div style="max-width: 800px; margin: 0 auto;">
-            <div class="glass-card" data-aos="fade-up">
-              <h2 class="section-title" style="font-size: var(--text-2xl);">Quiénes somos</h2>
-              <p style="color: var(--text-secondary); line-height: 1.9; margin-bottom: var(--space-lg);">
-                Whitedragonsoftware LLC es un proveedor de software B2B enfocado en la habilitación de operaciones de back-office para operadores y la conectividad con Agregadores de Juegos.
-              </p>
-              <p style="color: var(--text-secondary); line-height: 1.9; margin-bottom: var(--space-lg);">
-                Nuestra plataforma permite a los operadores con licencia gestionar sus operaciones de manera eficiente, conectar con agregadores de contenido y mantener el control sobre sus procesos internos a través de un panel de administración integral.
-              </p>
-              <div style="padding: var(--space-md); background: var(--accent-subtle); border-radius: var(--radius-md); border-left: 3px solid var(--accent-primary);">
-                <p style="color: var(--text-primary); font-weight: 600;">
-                  Whitedragonsoftware LLC — USA
-                </p>
-              </div>
-            </div>
+          <div class="section-header">
+            <h2 class="section-title" data-hero-reveal>Perfil corporativo</h2>
+            <p class="section-subtitle">Nuestra estructura empresarial está orientada a relaciones de largo plazo con operadores y partners B2B.</p>
           </div>
-        </div>
-      </section>
 
-      <!-- TIMELINE -->
-      <section class="section gradient-bg">
-        <div class="container">
-          <div style="text-align: center; margin-bottom: var(--space-xl);">
-            <h2 class="section-title" data-text-reveal>Nuestra Trayectoria</h2>
-            <p class="section-subtitle" style="margin-left: auto; margin-right: auto;" data-gsap="fade-up">
-              Hitos clave en el crecimiento de White Dragon.
-            </p>
-          </div>
-          <div class="timeline">
-            <div class="timeline__item" data-aos="fade-up" data-aos-delay="0">
-              <span class="timeline__year">2023</span>
-              <div class="timeline__content glass-card">
-                <h3>Fundación</h3>
-                <p>Whitedragonsoftware LLC se establece en Estados Unidos con la visión de crear herramientas B2B de última generación para operadores con licencia.</p>
+          <div class="cards-grid company-intro-grid" data-no-stagger="true">
+            <article class="glass-card company-card">
+              <p class="company-block-tag">Declaración</p>
+              <p class="glass-card__text">Whitedragonsoftware LLC es un proveedor de software B2B enfocado en back-office para operadores y conectividad con Game Aggregators.</p>
+              <p class="glass-card__text">Diseñamos, implementamos y operamos soluciones técnicas bajo alcances definidos, con foco en continuidad del servicio, trazabilidad y eficiencia operativa.</p>
+              <ul class="company-list">
+                <li>Arquitectura y operación orientadas a entornos de misión crítica.</li>
+                <li>Procesos técnicos estandarizados para gobernanza y control.</li>
+                <li>Ejecución coordinada con equipos de operación del cliente.</li>
+              </ul>
+            </article>
+
+            <article class="glass-card company-card company-card--model">
+              <p class="company-block-tag">Entidad</p>
+              <div class="company-model-frame" aria-hidden="true">
+                <model-viewer
+                  class="company-model-viewer"
+                  data-dragon-model
+                  alt="Figura 3D institucional de White Dragon"
+                  camera-controls
+                  auto-rotate
+                  auto-rotate-delay="0"
+                  rotation-per-second="24deg"
+                  interaction-prompt="none"
+                  loading="eager"
+                  reveal="auto"
+                ></model-viewer>
               </div>
-            </div>
-            <div class="timeline__item" data-aos="fade-up" data-aos-delay="100">
-              <span class="timeline__year">2024</span>
-              <div class="timeline__content glass-card">
-                <h3>Primera Integración</h3>
-                <p>Lanzamiento exitoso de la primera integración con un Agregador de Juegos y despliegue del panel de administración para operadores.</p>
-              </div>
-            </div>
-            <div class="timeline__item" data-aos="fade-up" data-aos-delay="200">
-              <span class="timeline__year">2025</span>
-              <div class="timeline__content glass-card">
-                <h3>Expansión LATAM</h3>
-                <p>Ampliación de operaciones a mercados de América Latina, incorporando nuevos operadores y agregadores a la plataforma.</p>
-              </div>
-            </div>
-            <div class="timeline__item" data-aos="fade-up" data-aos-delay="300">
-              <span class="timeline__year">2026</span>
-              <div class="timeline__content glass-card">
-                <h3>+50 Operadores</h3>
-                <p>Superamos los 50 operadores conectados globalmente, consolidando nuestra posición como proveedor B2B de referencia en el sector.</p>
-              </div>
-            </div>
+              <p class="glass-card__text company-entity"><strong>Whitedragonsoftware LLC — USA</strong></p>
+              <ul class="company-list">
+                <li>Entidad orientada a servicios de software e infraestructura B2B.</li>
+                <li>Vinculación contractual con operadores y partners corporativos.</li>
+                <li>Ejecución basada en procesos técnicos y mejora continua.</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- VALORES -->
-      <section class="section">
+      <section class="section company-section company-section--base-b">
         <div class="container">
-          <div style="text-align: center; margin-bottom: var(--space-xl);">
-            <h2 class="section-title" data-text-reveal>Nuestro enfoque</h2>
+          <div class="section-header">
+            <h2 class="section-title" data-hero-reveal>Capacidades principales</h2>
+            <p class="section-subtitle">Integramos producto, operación y soporte para respaldar la ejecución tecnológica de operadores B2B.</p>
           </div>
-          <div class="cards-grid" style="max-width: 900px; margin: 0 auto;">
-            <div class="glass-card" data-aos="fade-up" data-aos-delay="0">
-              <div class="glass-card__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-              </div>
-              <h3 class="glass-card__title">Transparencia</h3>
-              <p class="glass-card__text">Operamos con total claridad sobre nuestro alcance y limitaciones como proveedor B2B.</p>
-            </div>
-            <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
-              <div class="glass-card__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                </svg>
-              </div>
-              <h3 class="glass-card__title">Eficiencia</h3>
-              <p class="glass-card__text">Herramientas diseñadas para optimizar las operaciones de back-office del operador.</p>
-            </div>
-            <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
-              <div class="glass-card__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-                </svg>
-              </div>
-              <h3 class="glass-card__title">Conectividad</h3>
-              <p class="glass-card__text">Facilitamos la integración con tecnologías de agregación de terceros líderes.</p>
-            </div>
+
+          <div class="cards-grid company-capabilities-grid" data-no-stagger="true">
+            <article class="glass-card company-card">
+              <h3 class="glass-card__title">Back-office para operadores</h3>
+              <ul class="company-list">
+                <li>Paneles de administración con parametrización por cliente.</li>
+                <li>Controles de acceso, roles y trazabilidad de acciones.</li>
+                <li>Dashboards operativos y reportes para toma de decisiones.</li>
+              </ul>
+            </article>
+
+            <article class="glass-card company-card">
+              <h3 class="glass-card__title">Conectividad con Game Aggregators</h3>
+              <ul class="company-list">
+                <li>Integración técnica con agregadores definidos por el operador.</li>
+                <li>Gestión de enrutamiento y monitoreo de flujos de integración.</li>
+                <li>Evolución continua de la capa de conectividad B2B.</li>
+              </ul>
+            </article>
+
+            <article class="glass-card company-card">
+              <h3 class="glass-card__title">Operación técnica continua</h3>
+              <ul class="company-list">
+                <li>Gestión de entornos, despliegues y soporte operativo.</li>
+                <li>Monitoreo preventivo y respuesta técnica a incidencias.</li>
+                <li>Plan de mejora continua conforme a alcance contratado.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section company-section company-section--base-a">
+        <div class="container">
+          <div class="cards-grid company-model-grid" data-no-stagger="true">
+            <article class="glass-card company-card">
+              <h3 class="glass-card__title">Modelo de relación</h3>
+              <p class="glass-card__text">Trabajamos con operadores y equipos B2B mediante alcances técnicos formalizados, con foco en gobernanza operativa, estabilidad y escalabilidad.</p>
+              <ul class="company-list">
+                <li>Planificación por hitos y entregables técnicos verificables.</li>
+                <li>Seguimiento operativo con métricas de continuidad y desempeño.</li>
+                <li>Roadmap evolutivo alineado a prioridades del operador.</li>
+              </ul>
+            </article>
+
+            <article class="glass-card company-card">
+              <h3 class="glass-card__title">Marco de alcance</h3>
+              <ul class="company-list">
+                <li>No operamos juegos ni aceptamos apuestas.</li>
+                <li>No gestionamos fondos, pagos ni wallets de jugadores.</li>
+                <li>No brindamos servicios player-facing.</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -122,12 +128,7 @@
 
     {{> footer}}
 
-    <script type="module">
-      import '/src/js/main.js'
-      import { initScrollAnimations } from '/src/js/animations/scroll-animations.js'
-      import { initTextReveal } from '/src/js/animations/text-reveal.js'
-      initScrollAnimations()
-      initTextReveal()
-    </script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script type="module" src="/src/js/pages/empresa.js"></script>
   </body>
 </html>

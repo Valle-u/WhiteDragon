@@ -2,89 +2,74 @@
 <html lang="es">
   <head>
     {{> head}}
-    <title>Cumplimiento — White Dragon</title>
+    <title>Cumplimiento — Whitedragonsoftware LLC</title>
   </head>
   <body>
     {{> navbar}}
 
-    <main>
-      <!-- HERO SUB -->
-      <section class="hero hero--sub">
+    <main class="compliance-main">
+      <section class="hero hero--sub compliance-hero">
         <div class="hero__content">
-          <div class="hero__badge"><span>Regulatorio</span></div>
+          <div class="hero__badge"><span>Cumplimiento</span></div>
           <h1 class="hero__title">Cumplimiento y <span class="hero__title-accent">Límites Operativos</span></h1>
-          <p class="hero__subtitle">Transparencia sobre nuestro alcance operativo y responsabilidades.</p>
         </div>
       </section>
 
-      <!-- ALCANCE -->
-      <section class="section" style="background: var(--bg-secondary);">
+      <section class="section compliance-section compliance-section--base-a">
         <div class="container">
-          <h2 class="section-title" data-gsap="fade-up">Alcance</h2>
-          <div class="glass-card" style="max-width: 800px;" data-aos="fade-up">
-            <p style="color: var(--text-secondary); line-height: 1.8;">
-              Whitedragonsoftware LLC proporciona software B2B a operadores con licencia y socios B2B. Los operadores son los únicos responsables del licenciamiento, AML/KYC, pagos, cuentas de jugadores y todas las obligaciones dirigidas a los jugadores.
-            </p>
+          <div class="section-header">
+            <h2 class="section-title" data-hero-reveal>Marco de cumplimiento</h2>
+            <p class="section-subtitle">Estos bloques resumen el alcance operativo B2B, las exclusiones del servicio y los límites legales del sitio.</p>
           </div>
-        </div>
-      </section>
 
-      <!-- EXCLUSIONES -->
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title" data-gsap="fade-up">Exclusiones explícitas</h2>
-          <p class="section-subtitle" data-gsap="fade-up">Declaramos de forma transparente lo que NO hacemos.</p>
-          <div class="cards-grid" style="max-width: 900px;">
-            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="0">
-              <h3 class="glass-card__title">No operamos juegos de azar</h3>
-            </div>
-            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="50">
-              <h3 class="glass-card__title">No ofrecemos servicios a jugadores individuales</h3>
-            </div>
-            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="glass-card__title">No aceptamos apuestas ni wagers</h3>
-            </div>
-            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="150">
-              <h3 class="glass-card__title">No gestionamos fondos de jugadores</h3>
-            </div>
-            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="glass-card__title">No proporcionamos billeteras ni procesamiento de pagos</h3>
-            </div>
-            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="250">
-              <h3 class="glass-card__title">No ofrecemos soporte al jugador</h3>
-            </div>
-            <div class="glass-card glass-card--exclusion" data-aos="fade-up" data-aos-delay="300">
-              <h3 class="glass-card__title">No controlamos RTP, jackpots ni resultados de juegos</h3>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div class="cards-grid compliance-grid" data-no-stagger="true">
+            <article class="glass-card compliance-card">
+              <h3 class="glass-card__title">Alcance</h3>
+              <p class="glass-card__text">Whitedragonsoftware LLC brinda software B2B a operadores con licencia.</p>
+              <p class="glass-card__text">Nuestro alcance se limita a infraestructura, back-office, conectividad y soporte tecnico para operacion B2B.</p>
+              <p class="glass-card__text">Los operadores son responsables de:</p>
+              <ul class="compliance-list">
+                <li>Licencias</li>
+                <li>AML / KYC</li>
+                <li>Pagos</li>
+                <li>Cuentas de jugadores</li>
+                <li>Obligaciones frente a jugadores</li>
+              </ul>
+            </article>
 
-      <!-- SANCIONES -->
-      <section class="section" style="background: var(--bg-secondary);">
-        <div class="container">
-          <h2 class="section-title" data-gsap="fade-up">Sanciones y mercados prohibidos</h2>
-          <div class="glass-card" style="max-width: 800px;" data-aos="fade-up">
-            <p style="color: var(--text-secondary); line-height: 1.8;">
-              No damos soporte a jurisdicciones sancionadas y nos reservamos el derecho de rechazar el servicio.
-            </p>
-          </div>
-        </div>
-      </section>
+            <article class="glass-card compliance-card">
+              <h3 class="glass-card__title">Exclusiones explícitas</h3>
+              <p class="glass-card__text">La compania no actua como operador de juego ni como proveedor de servicios al jugador final.</p>
+              <ul class="compliance-list">
+                <li>No operamos juegos</li>
+                <li>No trabajamos con jugadores</li>
+                <li>No aceptamos apuestas</li>
+                <li>No manejamos fondos</li>
+                <li>No ofrecemos wallets</li>
+                <li>No damos soporte a jugadores</li>
+                <li>No controlamos RTP ni jackpots</li>
+              </ul>
+            </article>
 
-      <!-- SIN ASESORÍA REGULATORIA -->
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title" data-gsap="fade-up">Aviso importante</h2>
-          <div class="glass-card" style="max-width: 800px; border-color: var(--warning);" data-aos="fade-up">
-            <div class="glass-card__icon" style="background: rgba(255, 171, 0, 0.1); color: var(--warning);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
-              </svg>
-            </div>
-            <p style="color: var(--text-secondary); line-height: 1.8;">
-              Nada en este sitio web constituye asesoramiento legal, regulatorio o de licenciamiento.
-            </p>
+            <article class="glass-card compliance-card">
+              <h3 class="glass-card__title">Sanciones</h3>
+              <p class="glass-card__text">No operamos en jurisdicciones sancionadas y podemos rechazar servicios.</p>
+              <ul class="compliance-list">
+                <li>Se realizan validaciones internas antes de habilitar un alcance comercial.</li>
+                <li>Podemos suspender o terminar el servicio si surge un riesgo regulatorio relevante.</li>
+                <li>La continuidad del servicio depende del cumplimiento normativo del operador.</li>
+              </ul>
+            </article>
+
+            <article class="glass-card compliance-card compliance-card--warning">
+              <h3 class="glass-card__title">Sin asesoría legal</h3>
+              <p class="glass-card__text">Nada en este sitio constituye asesoramiento legal o regulatorio.</p>
+              <p class="glass-card__text">La evaluacion legal, fiscal y regulatoria de cada jurisdiccion debe ser realizada por asesores profesionales del operador.</p>
+              <ul class="compliance-list">
+                <li>Este contenido tiene caracter informativo corporativo.</li>
+                <li>No reemplaza opinion legal independiente ni dictamen regulatorio.</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -92,10 +77,6 @@
 
     {{> footer}}
 
-    <script type="module">
-      import '/src/js/main.js'
-      import { initScrollAnimations } from '/src/js/animations/scroll-animations.js'
-      initScrollAnimations()
-    </script>
+    <script type="module" src="/src/js/pages/cumplimiento.js"></script>
   </body>
 </html>

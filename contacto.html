@@ -2,116 +2,99 @@
 <html lang="es">
   <head>
     {{> head}}
-    <title>Contacto — White Dragon</title>
+    <title>Contacto — Whitedragonsoftware LLC</title>
   </head>
   <body>
     {{> navbar}}
 
-    <main>
-      <!-- HERO SUB -->
-      <section class="hero hero--sub">
+    <main class="contact-main">
+      <section class="hero hero--sub contact-hero">
         <div class="hero__content">
           <div class="hero__badge"><span>Contacto</span></div>
-          <h1 class="hero__title" data-text-reveal><span class="hero__title-accent">Hablemos</span></h1>
-          <p class="hero__subtitle">Trabajamos con operadores con licencia y socios B2B exclusivamente.</p>
+          <h1 class="hero__title">Contacto y <span class="hero__title-accent">Agendar llamada</span></h1>
+          <p class="hero__subtitle">Canal comercial para operadores con licencia y partners B2B.</p>
         </div>
       </section>
 
-      <!-- CONTACTO LAYOUT -->
-      <section class="section" style="background: var(--bg-secondary);">
+      <section class="section contact-section contact-section--base-a">
         <div class="container">
-          <div class="contact-layout">
-            <!-- Info cards -->
-            <div class="contact-info">
-              <div class="glass-card animate-float" data-aos="fade-up" data-aos-delay="0" style="text-align: center;">
-                <div class="glass-card__icon" style="margin: 0 auto var(--space-md);">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-                  </svg>
-                </div>
-                <h3 class="glass-card__title" style="font-size: var(--text-base);">Email</h3>
-                <p class="glass-card__text">info@whitedragonsoftware.com</p>
-              </div>
-              <div class="glass-card animate-float" data-aos="fade-up" data-aos-delay="100" style="text-align: center; animation-delay: 0.5s;">
-                <div class="glass-card__icon" style="margin: 0 auto var(--space-md);">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                  </svg>
-                </div>
-                <h3 class="glass-card__title" style="font-size: var(--text-base);">Ubicación</h3>
-                <p class="glass-card__text">Estados Unidos</p>
-              </div>
-              <div class="glass-card animate-float" data-aos="fade-up" data-aos-delay="200" style="text-align: center; animation-delay: 1s;">
-                <div class="glass-card__icon" style="margin: 0 auto var(--space-md);">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                  </svg>
-                </div>
-                <h3 class="glass-card__title" style="font-size: var(--text-base);">Horario</h3>
-                <p class="glass-card__text">Lun - Vie: 9:00 - 18:00 EST</p>
-              </div>
-            </div>
+          <div class="section-header">
+            <h2 class="section-title" data-hero-reveal>Canal comercial B2B</h2>
+            <p class="section-subtitle">Recibimos solicitudes de operadores y socios corporativos para evaluar integración, alcance técnico y próximos pasos.</p>
+          </div>
 
-            <!-- Form -->
-            <div class="contact-form-wrapper">
-              <div class="glass-card" data-aos="fade-up">
-                <h2 style="font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-lg);">Solicitar información</h2>
+          <div class="contact-layout" data-no-stagger="true">
+            <article class="glass-card contact-info-card">
+              <h3 class="glass-card__title">Antes de enviar tu solicitud</h3>
+              <p class="glass-card__text">Trabajamos exclusivamente con operadores con licencia y partners B2B. Este canal no atiende consultas de jugadores finales.</p>
+              <ul class="contact-list">
+                <li>Respuesta inicial por parte del equipo comercial y técnico.</li>
+                <li>Evaluación de alcance, jurisdicción y contexto operativo.</li>
+                <li>Siguiente paso: reunión de descubrimiento B2B.</li>
+              </ul>
 
-                <form id="contactForm" novalidate>
-                  <div class="form-row">
-                    <div class="form-group">
-                      <label class="form-label" for="company">Nombre de la Empresa *</label>
-                      <input class="form-input" type="text" id="company" name="company" placeholder="Su empresa" required>
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label" for="jurisdiction">Jurisdicción(es) de operación *</label>
-                      <input class="form-input" type="text" id="jurisdiction" name="jurisdiction" placeholder="Ej: Malta, Curaçao" required>
-                    </div>
-                  </div>
+              <a
+                class="btn btn-secondary contact-whatsapp-btn"
+                href="https://wa.me/5491166477368?text=Hola%20equipo%20de%20Whitedragonsoftware%20LLC,%20quisiera%20informacion%20sobre%20sus%20servicios%20B2B."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contactar por WhatsApp
+              </a>
+              <p class="contact-whatsapp-note">WhatsApp comercial de Whitedragonsoftware LLC.</p>
+            </article>
 
-                  <div class="form-row">
-                    <div class="form-group">
-                      <label class="form-label" for="website">Sitio Web</label>
-                      <input class="form-input" type="url" id="website" name="website" placeholder="https://...">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label" for="contactName">Nombre de Contacto *</label>
-                      <input class="form-input" type="text" id="contactName" name="contactName" placeholder="Su nombre" required>
-                    </div>
-                  </div>
-
+            <article class="glass-card contact-form-card">
+              <form id="contactForm" novalidate>
+                <div class="form-row">
                   <div class="form-group">
-                    <label class="form-label" for="email">Correo Electrónico *</label>
-                    <input class="form-input" type="email" id="email" name="email" placeholder="correo@empresa.com" required>
+                    <label class="form-label" for="company">Nombre de la empresa</label>
+                    <input class="form-input" type="text" id="company" name="company" required />
                   </div>
-
                   <div class="form-group">
-                    <label class="form-label" for="message">Mensaje</label>
-                    <textarea class="form-textarea" id="message" name="message" placeholder="Cuéntenos sobre sus necesidades..."></textarea>
+                    <label class="form-label" for="jurisdiction">Jurisdicción(es) de operación</label>
+                    <input class="form-input" type="text" id="jurisdiction" name="jurisdiction" required />
                   </div>
-
-                  <label class="form-checkbox">
-                    <input type="checkbox" id="b2bConfirm" required>
-                    <span class="form-checkbox-label">
-                      Confirmo que soy un operador con licencia o un socio B2B (no un jugador individual).
-                    </span>
-                  </label>
-
-                  <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitud</button>
-                </form>
-
-                <!-- Mensaje de éxito -->
-                <div id="formSuccess" style="display: none; text-align: center; padding: var(--space-xl);">
-                  <div style="font-size: var(--text-4xl); margin-bottom: var(--space-md);">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto;">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
-                  </div>
-                  <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-sm);">Solicitud enviada</h3>
-                  <p style="color: var(--text-secondary);">Nos pondremos en contacto con usted a la brevedad.</p>
                 </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="website">Sitio web</label>
+                    <input class="form-input" type="url" id="website" name="website" placeholder="https://..." />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="contactName">Nombre de contacto</label>
+                    <input class="form-input" type="text" id="contactName" name="contactName" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="email">Correo electrónico</label>
+                  <input class="form-input" type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="message">Mensaje</label>
+                  <textarea class="form-textarea" id="message" name="message" placeholder="Cuéntenos su contexto operativo y objetivos B2B."></textarea>
+                </div>
+
+                <label class="form-checkbox" id="b2bConfirmWrap">
+                  <input type="checkbox" id="b2bConfirm" required />
+                  <span class="form-checkbox-label">Confirmo que represento a un operador con licencia o a un partner B2B (no soy un jugador individual).</span>
+                </label>
+
+                <div id="contactStatus" class="contact-status" role="status" aria-live="polite" hidden></div>
+
+                <div class="contact-actions">
+                  <button type="submit" class="btn btn-primary contact-submit">Enviar solicitud</button>
+                </div>
+              </form>
+
+              <div id="formSuccess" class="contact-success" hidden>
+                <h3 class="glass-card__title">Solicitud enviada</h3>
+                <p class="glass-card__text">Gracias por escribirnos. Nuestro equipo evaluara la solicitud y respondera por correo a la brevedad.</p>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -119,12 +102,6 @@
 
     {{> footer}}
 
-    <script type="module">
-      import '/src/js/main.js'
-      import { initContactForm } from '/src/js/components/contact-form.js'
-      import { initTextReveal } from '/src/js/animations/text-reveal.js'
-      initContactForm()
-      initTextReveal()
-    </script>
+    <script type="module" src="/src/js/pages/contacto.js"></script>
   </body>
 </html>

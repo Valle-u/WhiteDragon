@@ -8,9 +8,15 @@ export function initParticles(canvasId) {
   let animationId
 
   function resize() {
-    canvas.width = canvas.offsetWidth * Math.min(window.devicePixelRatio, 2)
-    canvas.height = canvas.offsetHeight * Math.min(window.devicePixelRatio, 2)
-    ctx.scale(Math.min(window.devicePixelRatio, 2), Math.min(window.devicePixelRatio, 2))
+    const dpr = Math.min(window.devicePixelRatio || 1, 2)
+    const parent = canvas.parentElement
+    const rect = parent ? parent.getBoundingClientRect() : canvas.getBoundingClientRect()
+    const width = Math.max(1, Math.floor(rect.width))
+    const height = Math.max(1, Math.floor(rect.height))
+
+    canvas.width = width * dpr
+    canvas.height = height * dpr
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
   }
 
   function getParticleCount() {

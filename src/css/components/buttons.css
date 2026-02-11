@@ -2,13 +2,14 @@
    BUTTONS
    ======================================== */
 .btn {
+  font-family: var(--font-primary);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
   padding: 0.875rem 2rem;
   border-radius: var(--radius-xl);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--text-sm);
   letter-spacing: 0.02em;
   transition: all 0.3s ease;
@@ -25,16 +26,18 @@
 .btn-primary::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-  transition: left 0.5s ease;
+  top: -12%;
+  left: -120%;
+  width: 48%;
+  height: 124%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.38), transparent);
+  transform: skewX(-18deg);
+  filter: blur(1px);
+  transition: left 0.68s ease;
 }
 
 .btn-primary:hover::after {
-  left: 100%;
+  left: 130%;
 }
 
 .btn-primary:hover {

@@ -2,53 +2,27 @@
 <html lang="es">
   <head>
     {{> head}}
-    <title>Política de Privacidad — White Dragon</title>
+    <title>Privacidad — Whitedragonsoftware LLC</title>
   </head>
   <body>
     {{> navbar}}
 
-    <main>
-      <section class="hero hero--sub">
+    <main class="legal-main">
+      <section class="hero hero--sub legal-hero">
         <div class="hero__content">
           <h1 class="hero__title"><span class="hero__title-accent">Política de Privacidad</span></h1>
-          <p class="hero__subtitle">Última actualización: Febrero 2026</p>
         </div>
       </section>
 
-      <section class="section" style="background: var(--bg-secondary);">
+      <section class="section legal-section legal-section--base-a">
         <div class="container">
-          <div class="legal-content" style="max-width: 800px; margin: 0 auto;">
-
-            <div class="legal-block glass-card" data-aos="fade-up">
-              <h2>1. Datos que Recopilamos</h2>
-              <p>Recopilamos información proporcionada voluntariamente a través de nuestro formulario de contacto: nombre de la empresa, jurisdicción de operación, sitio web, nombre de contacto, correo electrónico y mensaje. También podemos recopilar datos de uso del sitio a través de herramientas de analítica.</p>
-            </div>
-
-            <div class="legal-block glass-card" data-aos="fade-up">
-              <h2>2. Propósito del Tratamiento</h2>
-              <p>La información recopilada se utiliza exclusivamente para fines de ventas B2B y soporte comercial. No vendemos, alquilamos ni compartimos su información personal con terceros para fines de marketing.</p>
-            </div>
-
-            <div class="legal-block glass-card" data-aos="fade-up">
-              <h2>3. Cookies y Analítica</h2>
-              <p>Utilizamos cookies esenciales para el funcionamiento del sitio y cookies opcionales de analítica para comprender cómo se utiliza nuestro sitio. Puede gestionar sus preferencias de cookies a través de nuestro banner de consentimiento.</p>
-            </div>
-
-            <div class="legal-block glass-card" data-aos="fade-up">
-              <h2>4. Retención de Datos</h2>
-              <p>Conservamos la información de contacto durante el tiempo necesario para cumplir con el propósito para el que fue recopilada, o según lo requiera la ley aplicable.</p>
-            </div>
-
-            <div class="legal-block glass-card" data-aos="fade-up">
-              <h2>5. Derechos del Usuario</h2>
-              <p>Usted tiene derecho a acceder, corregir o solicitar la eliminación de su información personal. Para ejercer estos derechos, puede contactarnos a través de nuestro formulario de contacto.</p>
-            </div>
-
-            <div class="legal-block glass-card" data-aos="fade-up">
-              <h2>6. Contacto</h2>
-              <p>Para cualquier consulta relacionada con la privacidad, puede contactarnos a través de la página de <a href="/contacto.html" style="color: var(--accent-primary);">contacto</a> de este sitio.</p>
-            </div>
-
+          <div class="legal-content legal-content--md">
+            <div class="legal-block glass-card"><h2>Datos recogidos</h2><p>Recogemos datos enviados en formularios de contacto y datos técnicos de analítica del sitio.</p></div>
+            <div class="legal-block glass-card"><h2>Propósito</h2><p>Tratamos los datos para procesos comerciales B2B, ventas y soporte.</p></div>
+            <div class="legal-block glass-card"><h2>Cookies y analítica</h2><p>Utilizamos cookies esenciales y, con consentimiento, cookies de analítica.</p></div>
+            <div class="legal-block glass-card"><h2>Retención</h2><p>Conservamos los datos durante el tiempo necesario para los fines indicados o por obligación legal.</p></div>
+            <div class="legal-block glass-card"><h2>Derechos del usuario</h2><p>Puede solicitar acceso, rectificación o eliminación de sus datos.</p></div>
+            <div class="legal-block glass-card"><h2>Email de contacto</h2><p>Para consultas de privacidad: <a class="legal-link" href="mailto:info@whitedragonsoftware.com">info@whitedragonsoftware.com</a></p></div>
           </div>
         </div>
       </section>
@@ -56,14 +30,6 @@
 
     {{> footer}}
 
-    <style>
-      .legal-block { margin-bottom: var(--space-lg); }
-      .legal-block h2 { font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-md); color: var(--text-primary); }
-      .legal-block p { color: var(--text-secondary); line-height: 1.8; }
-    </style>
-
-    <script type="module">
-      import '/src/js/main.js'
-    </script>
+    <script type="module" src="/src/js/pages/legal.js"></script>
   </body>
 </html>

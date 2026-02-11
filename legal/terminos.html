@@ -7,17 +7,17 @@
   <body>
     {{> navbar}}
 
-    <main>
-      <section class="hero hero--sub">
+    <main class="legal-main">
+      <section class="hero hero--sub legal-hero">
         <div class="hero__content">
           <h1 class="hero__title"><span class="hero__title-accent">Términos de Uso</span></h1>
           <p class="hero__subtitle">Última actualización: Febrero 2026</p>
         </div>
       </section>
 
-      <section class="section" style="background: var(--bg-secondary);">
+      <section class="section legal-section legal-section--base-a">
         <div class="container">
-          <div class="legal-content" style="max-width: 800px; margin: 0 auto;">
+          <div class="legal-content legal-content--sm">
 
             <div class="legal-block glass-card" data-aos="fade-up">
               <h2>1. Aceptación de los Términos</h2>
@@ -61,15 +61,6 @@
 
     {{> footer}}
 
-    <style>
-      .legal-block { margin-bottom: var(--space-lg); }
-      .legal-block h2 { font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-md); color: var(--text-primary); }
-      .legal-block p { color: var(--text-secondary); line-height: 1.8; }
-      .legal-block p + p { margin-top: var(--space-md); }
-    </style>
-
-    <script type="module">
-      import '/src/js/main.js'
-    </script>
+    <script type="module" src="/src/js/pages/legal.js"></script>
   </body>
 </html>

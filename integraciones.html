@@ -2,205 +2,150 @@
 <html lang="es">
   <head>
     {{> head}}
-    <title>Integraciones — White Dragon</title>
+    <title>Integraciones — Whitedragonsoftware LLC</title>
   </head>
   <body>
     {{> navbar}}
 
-    <main>
-      <!-- HERO SUB -->
-      <section class="hero hero--sub">
+    <main class="integrations-main">
+      <section class="hero hero--sub integrations-hero">
         <div class="hero__content">
-          <div class="hero__badge"><span>Conectividad</span></div>
-          <h1 class="hero__title" data-text-reveal><span class="hero__title-accent">Integraciones</span></h1>
-          <p class="hero__subtitle">Conectividad con Agregadores de Juegos seleccionados por el operador.</p>
+          <div class="hero__badge"><span>Integraciones</span></div>
+          <h1 class="hero__title">Conectividad con <span class="hero__title-accent">Agregadores</span></h1>
+          <p class="hero__subtitle">Modelo B2B para habilitar integración técnica con agregadores elegidos por el operador.</p>
         </div>
       </section>
 
-      <!-- DESCRIPCIÓN -->
-      <section class="section" style="background: var(--bg-secondary);">
+      <section class="section integrations-section integrations-section--base-a">
         <div class="container">
-          <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-            <h2 class="section-title" data-text-reveal>Conectividad fluida</h2>
-            <p class="section-subtitle" style="margin-left: auto; margin-right: auto;" data-gsap="fade-up">
-              Habilitamos la conectividad con Agregadores de Juegos de terceros seleccionados por el operador.
-            </p>
-            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-xl);" data-gsap="fade-up">
-              El operador mantiene la responsabilidad sobre el licenciamiento, las aprobaciones de contenido y todas las obligaciones regulatorias en sus jurisdicciones.
-            </p>
+          <div class="section-header">
+            <h2 class="section-title" data-hero-reveal>Declaración oficial de alcance</h2>
           </div>
 
-          <!-- DIAGRAMA SVG ANIMADO -->
-          <div class="integration-diagram" data-aos="fade-up">
-            <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 800px; margin: 0 auto; display: block;">
-              <defs>
-                <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.1"/>
-                  <stop offset="50%" stop-color="#00d4ff" stop-opacity="0.6"/>
-                  <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.1"/>
-                </linearGradient>
-                <filter id="nodePulse">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
-                </filter>
-              </defs>
+          <article class="glass-card integrations-statement">
+            <p class="glass-card__text">Permitimos la conectividad con Game Aggregators de terceros seleccionados por el operador.</p>
+            <p class="glass-card__text">El operador es responsable de licencias, aprobaciones de contenido y cumplimiento regulatorio.</p>
+          </article>
+        </div>
+      </section>
 
-              <!-- Central node -->
-              <rect x="300" y="110" width="200" height="80" rx="16" fill="rgba(0,212,255,0.08)" stroke="#00d4ff" stroke-width="1.5"/>
-              <text x="400" y="145" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700" font-family="Inter, sans-serif">WHITE DRAGON</text>
-              <text x="400" y="170" text-anchor="middle" fill="#a0a0b8" font-size="10" font-family="Inter, sans-serif">Plataforma B2B</text>
+      <section class="section integrations-section integrations-section--base-b">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" data-hero-reveal>Alcance técnico de integración</h2>
+            <p class="section-subtitle">Capas operativas para conectar contenido de agregación sin involucrar servicios player-facing.</p>
+          </div>
 
-              <!-- Central node pulse -->
-              <rect x="300" y="110" width="200" height="80" rx="16" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.3" class="pulse-node"/>
+          <div class="cards-grid integrations-capabilities-grid" data-no-stagger="true">
+            <article class="glass-card integrations-card">
+              <h3 class="glass-card__title">Capa de conectividad GA</h3>
+              <ul class="integrations-list">
+                <li>Conexión con agregadores autorizados por el operador.</li>
+                <li>Enrutamiento técnico de solicitudes y respuestas.</li>
+                <li>Gestión de configuración por cliente operador.</li>
+              </ul>
+            </article>
 
-              <!-- Left nodes (Operators) -->
-              <rect x="30" y="30" width="160" height="55" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1" class="diagram-node"/>
-              <text x="110" y="55" text-anchor="middle" fill="#a0a0b8" font-size="11" font-family="Inter, sans-serif">Operador A</text>
-              <text x="110" y="72" text-anchor="middle" fill="#6a6a80" font-size="9" font-family="Inter, sans-serif">Con licencia</text>
+            <article class="glass-card integrations-card">
+              <h3 class="glass-card__title">Operación y soporte técnico</h3>
+              <ul class="integrations-list">
+                <li>Mantenimiento de la capa de integración B2B.</li>
+                <li>Soporte técnico para continuidad de servicio.</li>
+                <li>Mejoras evolutivas acordadas con el operador.</li>
+              </ul>
+            </article>
 
-              <rect x="30" y="120" width="160" height="55" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1" class="diagram-node"/>
-              <text x="110" y="145" text-anchor="middle" fill="#a0a0b8" font-size="11" font-family="Inter, sans-serif">Operador B</text>
-              <text x="110" y="162" text-anchor="middle" fill="#6a6a80" font-size="9" font-family="Inter, sans-serif">Con licencia</text>
-
-              <rect x="30" y="210" width="160" height="55" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1" class="diagram-node"/>
-              <text x="110" y="235" text-anchor="middle" fill="#a0a0b8" font-size="11" font-family="Inter, sans-serif">Operador C</text>
-              <text x="110" y="252" text-anchor="middle" fill="#6a6a80" font-size="9" font-family="Inter, sans-serif">Con licencia</text>
-
-              <!-- Right nodes (Game Aggregators) -->
-              <rect x="610" y="60" width="160" height="55" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1" class="diagram-node"/>
-              <text x="690" y="85" text-anchor="middle" fill="#a0a0b8" font-size="11" font-family="Inter, sans-serif">Agregador de</text>
-              <text x="690" y="102" text-anchor="middle" fill="#6a6a80" font-size="9" font-family="Inter, sans-serif">Juegos</text>
-
-              <rect x="610" y="175" width="160" height="55" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1" class="diagram-node"/>
-              <text x="690" y="200" text-anchor="middle" fill="#a0a0b8" font-size="11" font-family="Inter, sans-serif">Agregador de</text>
-              <text x="690" y="217" text-anchor="middle" fill="#6a6a80" font-size="9" font-family="Inter, sans-serif">Juegos</text>
-
-              <!-- Connection lines - left -->
-              <line x1="190" y1="57" x2="300" y2="140" stroke="url(#lineGrad)" stroke-width="1.5" stroke-dasharray="6,4" class="animated-line"/>
-              <line x1="190" y1="147" x2="300" y2="150" stroke="url(#lineGrad)" stroke-width="1.5" stroke-dasharray="6,4" class="animated-line"/>
-              <line x1="190" y1="237" x2="300" y2="160" stroke="url(#lineGrad)" stroke-width="1.5" stroke-dasharray="6,4" class="animated-line"/>
-
-              <!-- Connection lines - right -->
-              <line x1="500" y1="140" x2="610" y2="87" stroke="url(#lineGrad)" stroke-width="1.5" stroke-dasharray="6,4" class="animated-line"/>
-              <line x1="500" y1="160" x2="610" y2="202" stroke="url(#lineGrad)" stroke-width="1.5" stroke-dasharray="6,4" class="animated-line"/>
-
-              <!-- Data packets (small circles traveling along lines) -->
-              <circle r="3" fill="#00d4ff" opacity="0.8" class="data-packet">
-                <animateMotion dur="2s" repeatCount="indefinite" path="M190,57 L300,140" />
-              </circle>
-              <circle r="3" fill="#00d4ff" opacity="0.8" class="data-packet">
-                <animateMotion dur="1.8s" repeatCount="indefinite" path="M190,147 L300,150" begin="0.3s" />
-              </circle>
-              <circle r="3" fill="#00d4ff" opacity="0.8" class="data-packet">
-                <animateMotion dur="2.2s" repeatCount="indefinite" path="M190,237 L300,160" begin="0.6s" />
-              </circle>
-              <circle r="3" fill="#00d4ff" opacity="0.8" class="data-packet">
-                <animateMotion dur="2s" repeatCount="indefinite" path="M500,140 L610,87" begin="0.5s" />
-              </circle>
-              <circle r="3" fill="#00d4ff" opacity="0.8" class="data-packet">
-                <animateMotion dur="1.9s" repeatCount="indefinite" path="M500,160 L610,202" begin="0.8s" />
-              </circle>
-            </svg>
+            <article class="glass-card integrations-card">
+              <h3 class="glass-card__title">Control y visibilidad</h3>
+              <ul class="integrations-list">
+                <li>Monitoreo técnico de estado operativo.</li>
+                <li>Trazabilidad de eventos de integración.</li>
+                <li>Reporting operacional para equipos B2B.</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- CÓMO FUNCIONA LA INTEGRACIÓN -->
-      <section class="section gradient-bg">
+      <section class="section integrations-section integrations-section--base-a">
         <div class="container">
-          <div style="text-align: center; margin-bottom: var(--space-xl);">
-            <h2 class="section-title" data-text-reveal>Proceso de Integración</h2>
+          <div class="section-header">
+            <h2 class="section-title" data-hero-reveal>Matriz de responsabilidades</h2>
           </div>
-          <div class="steps">
-            <div class="step" data-aos="fade-up" data-aos-delay="0">
-              <span class="step__number">01</span>
-              <div class="step__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-                </svg>
-              </div>
-              <h3 class="step__title">Documentación</h3>
-              <p class="step__text">Acceda a nuestra documentación técnica de API y guías de integración.</p>
-            </div>
-            <div class="step__connector" data-aos="fade" data-aos-delay="100">
-              <svg viewBox="0 0 80 2" preserveAspectRatio="none">
-                <line x1="0" y1="1" x2="80" y2="1" stroke="var(--accent-primary)" stroke-width="2" stroke-dasharray="6 4" opacity="0.4"/>
-              </svg>
-            </div>
-            <div class="step" data-aos="fade-up" data-aos-delay="200">
-              <span class="step__number">02</span>
-              <div class="step__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-                </svg>
-              </div>
-              <h3 class="step__title">Implementación</h3>
-              <p class="step__text">Integre mediante nuestra API unificada con soporte técnico dedicado.</p>
-            </div>
-            <div class="step__connector" data-aos="fade" data-aos-delay="300">
-              <svg viewBox="0 0 80 2" preserveAspectRatio="none">
-                <line x1="0" y1="1" x2="80" y2="1" stroke="var(--accent-primary)" stroke-width="2" stroke-dasharray="6 4" opacity="0.4"/>
-              </svg>
-            </div>
-            <div class="step" data-aos="fade-up" data-aos-delay="400">
-              <span class="step__number">03</span>
-              <div class="step__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
-                </svg>
-              </div>
-              <h3 class="step__title">Producción</h3>
-              <p class="step__text">Pase a producción con monitoreo continuo y soporte operativo.</p>
-            </div>
+
+          <div class="integrations-matrix" data-no-stagger="true">
+            <article class="glass-card integrations-matrix-card">
+              <h3 class="glass-card__title">Responsabilidad de Whitedragonsoftware LLC</h3>
+              <ul class="integrations-list">
+                <li>Desarrollar, mantener y operar la infraestructura de integración B2B.</li>
+                <li>Brindar soporte técnico y mantenimiento sobre la plataforma.</li>
+                <li>Gestionar conectividad entre panel administrador y agregadores.</li>
+                <li>Proveer observabilidad técnica del flujo de integración.</li>
+              </ul>
+            </article>
+
+            <article class="glass-card integrations-matrix-card">
+              <h3 class="glass-card__title">Responsabilidad del operador</h3>
+              <ul class="integrations-list">
+                <li>Licenciamiento y cumplimiento regulatorio por jurisdicción.</li>
+                <li>Aprobaciones de contenido y homologaciones requeridas.</li>
+                <li>AML/KYC, pagos, cuentas de jugadores y obligaciones player-facing.</li>
+                <li>Relación contractual y comercial con terceros de contenido.</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- AVISO DE MARCAS -->
-      <section class="section">
+      <section class="section integrations-section integrations-section--base-b">
         <div class="container">
-          <div class="glass-card" style="max-width: 700px; margin: 0 auto; text-align: center;" data-aos="fade-up">
-            <p style="color: var(--text-tertiary); font-size: var(--text-sm); font-style: italic;">
-              Las marcas de terceros pertenecen a sus respectivos propietarios. No se implica ningún respaldo.
-            </p>
+          <div class="section-header">
+            <h2 class="section-title" data-hero-reveal>Proceso de integración con operadores</h2>
+            <p class="section-subtitle">Etapas operativas para conectar agregadores con salida técnica controlada.</p>
           </div>
+
+          <div class="cards-grid integrations-steps-grid" data-no-stagger="true">
+            <article class="glass-card integrations-step-card">
+              <span class="integrations-step-index">01</span>
+              <h3 class="glass-card__title">Discovery técnico</h3>
+              <p class="glass-card__text">Relevamiento de entorno, alcance y requerimientos del operador.</p>
+            </article>
+            <article class="glass-card integrations-step-card">
+              <span class="integrations-step-index">02</span>
+              <h3 class="glass-card__title">Configuración de integración</h3>
+              <p class="glass-card__text">Parámetros de conexión, reglas y validaciones iniciales.</p>
+            </article>
+            <article class="glass-card integrations-step-card">
+              <span class="integrations-step-index">03</span>
+              <h3 class="glass-card__title">Pruebas funcionales</h3>
+              <p class="glass-card__text">Verificación técnica de flujos y estabilidad operativa.</p>
+            </article>
+            <article class="glass-card integrations-step-card">
+              <span class="integrations-step-index">04</span>
+              <h3 class="glass-card__title">Go-live controlado</h3>
+              <p class="glass-card__text">Activación gradual con monitoreo y soporte técnico activo.</p>
+            </article>
+            <article class="glass-card integrations-step-card">
+              <span class="integrations-step-index">05</span>
+              <h3 class="glass-card__title">Optimización continua</h3>
+              <p class="glass-card__text">Mantenimiento evolutivo y mejoras acordadas con el cliente.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section integrations-section integrations-section--base-a">
+        <div class="container">
+          <article class="glass-card integrations-legal-note">
+            <p class="integrations-muted">Las marcas de terceros pertenecen a sus respectivos dueños. No se implica ningún tipo de respaldo.</p>
+            <p class="integrations-muted">No se mencionan nombres concretos de terceros.</p>
+          </article>
         </div>
       </section>
     </main>
 
     {{> footer}}
 
-    <style>
-      .animated-line {
-        animation: dashFlow 1.5s linear infinite;
-      }
-      @keyframes dashFlow {
-        to { stroke-dashoffset: -20; }
-      }
-      .pulse-node {
-        animation: pulseNode 2s ease-in-out infinite;
-      }
-      @keyframes pulseNode {
-        0%, 100% { opacity: 0.1; transform: scale(1); }
-        50% { opacity: 0.4; }
-      }
-      .diagram-node {
-        transition: stroke 0.3s ease, fill 0.3s ease;
-      }
-      .diagram-node:hover {
-        stroke: rgba(0, 212, 255, 0.3);
-        fill: rgba(0, 212, 255, 0.04);
-      }
-      .data-packet {
-        filter: drop-shadow(0 0 4px rgba(0, 212, 255, 0.6));
-      }
-    </style>
-
-    <script type="module">
-      import '/src/js/main.js'
-      import { initScrollAnimations } from '/src/js/animations/scroll-animations.js'
-      import { initTextReveal } from '/src/js/animations/text-reveal.js'
-      initScrollAnimations()
-      initTextReveal()
-    </script>
+    <script type="module" src="/src/js/pages/integraciones.js"></script>
   </body>
 </html>

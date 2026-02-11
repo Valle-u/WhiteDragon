@@ -13,25 +13,30 @@ export function initScrollAnimations() {
         toggleActions: 'play none none none',
       },
       opacity: 0,
-      y: 50,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: 'power3.out',
+      y: 36,
+      duration: 0.95,
+      stagger: 0.1,
+      ease: 'power2.out',
     })
   })
 
   // Stagger cards
   gsap.utils.toArray('.cards-grid').forEach(grid => {
-    gsap.from(grid.querySelectorAll('.glass-card'), {
+    if (grid.dataset.noStagger === 'true') return
+
+    const cards = Array.from(grid.querySelectorAll('.glass-card')).filter(card => !card.classList.contains('feature-card'))
+    if (!cards.length) return
+
+    gsap.from(cards, {
       scrollTrigger: {
         trigger: grid,
-        start: 'top 85%',
+        start: 'top 88%',
       },
       opacity: 0,
-      y: 40,
-      stagger: 0.12,
-      duration: 0.7,
-      ease: 'power3.out',
+      y: 28,
+      stagger: 0.09,
+      duration: 0.85,
+      ease: 'power2.out',
     })
   })
 
@@ -49,4 +54,44 @@ export function initScrollAnimations() {
       ease: 'none',
     })
   }
+
+  // Hero-like reveal for highlighted section titles
+  gsap.utils.toArray('[data-hero-reveal]').forEach((el) => {
+    // Safety: ensure title is visible by default
+    gsap.set(el, { opacity: 1, y: 0, clearProps: 'transform' })
+
+    const rect = el.getBoundingClientRect()
+    const isInView = rect.top < window.innerHeight && rect.bottom > 0
+
+    if (isInView) {
+      gsap.fromTo(el, {
+        opacity: 0,
+        y: 24,
+      }, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        delay: 0.15,
+      })
+      return
+    }
+
+    gsap.fromTo(el, {
+      opacity: 0,
+      y: 24,
+    }, {
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        once: true,
+        toggleActions: 'play none none none',
+      },
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      immediateRender: false,
+      ease: 'power2.out',
+    })
+  })
 }

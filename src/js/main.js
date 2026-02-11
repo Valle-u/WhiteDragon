@@ -1,4 +1,3 @@
-import '../css/main.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { initNavbar } from './components/navbar.js'
@@ -8,6 +7,21 @@ import { initMouseFollower } from './animations/mouse-follower.js'
 import { initPageTransitions } from './animations/page-transitions.js'
 import { initMagneticButtons } from './animations/magnetic-button.js'
 import { initCardTilt } from './animations/tilt.js'
+
+function hideAppLoader() {
+  document.documentElement.classList.remove('is-preloading')
+  const loader = document.getElementById('appLoader')
+  if (!loader) return
+  loader.classList.add('is-hiding')
+}
+
+if (document.readyState === 'complete') {
+  requestAnimationFrame(hideAppLoader)
+} else {
+  window.addEventListener('load', hideAppLoader, { once: true })
+}
+
+window.addEventListener('pageshow', hideAppLoader)
 
 // Initialize AOS
 AOS.init({
