@@ -1,4 +1,5 @@
-const API_ENDPOINT = '/api/contact'
+const API_BASE_URL = String(import.meta.env.VITE_CONTACT_API_URL || '').trim().replace(/\/$/, '')
+const API_ENDPOINT = API_BASE_URL ? `${API_BASE_URL}/api/contact` : '/api/contact'
 
 export function initContactForm() {
   const form = document.getElementById('contactForm')

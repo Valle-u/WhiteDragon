@@ -10,6 +10,7 @@ Este proyecto usa `server/index.js` para recibir el formulario de contacto y env
 - `RESEND_API_KEY`: API key de Resend (`re_...`)
 - `MAIL_FROM`: remitente de salida
 - `MAIL_TO`: destino final del formulario
+- `CORS_ORIGIN`: origen permitido para llamadas del frontend (uno o varios separados por coma)
 
 Para este proyecto:
 
@@ -48,3 +49,11 @@ El frontend usa proxy de Vite (`/api` -> `http://localhost:8787`).
 2. Levantar backend: `npm run start`
 
 El servidor expone API y, si existe `dist`, tambien sirve los archivos estaticos.
+
+### Frontend estatico en otro dominio/hosting
+
+Si publicas el frontend en un hosting estatico distinto del backend (por ejemplo Hostinger + Render), define durante el build del frontend:
+
+- `VITE_CONTACT_API_URL=https://tu-backend.onrender.com`
+
+Y en el backend configura `CORS_ORIGIN` para permitir ese dominio del frontend.

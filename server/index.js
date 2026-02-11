@@ -15,12 +15,35 @@ const distDir = path.join(projectRoot, 'dist')
 
 app.use(express.json({ limit: '1mb' }))
 
-const corsOrigin = process.env.CORS_ORIGIN?.trim()
-if (corsOrigin) {
+const corsOrigins = String(process.env.CORS_ORIGIN || '')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean)
+
+if (corsOrigins.length) {
   app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', corsOrigin)
+    const requestOrigin = String(req.headers.origin || '').trim()
+    const isAllowedOrigin = requestOrigin && corsOrigins.includes(requestOrigin)
+
+    if (!requestOrigin) {
+      next()
+      return
+    }
+
+    if (!isAllowedOrigin) {
+      if (req.method === 'OPTIONS') {
+        res.status(403).end()
+        return
+      }
+
+      res.status(403).json({ ok: false, message: 'Origin no permitido por CORS.' })
+      return
+    }
+
+    res.setHeader('Access-Control-Allow-Origin', requestOrigin)
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+    res.setHeader('Vary', 'Origin')
 
     if (req.method === 'OPTIONS') {
       res.status(204).end()
